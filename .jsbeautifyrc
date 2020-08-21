@@ -1,0 +1,15 @@
+{
+    "css": {
+        "selector_separator_newline": false,
+        "newline_between_rules": false
+    },
+    "html": {
+        "extra_liners": [
+            ""
+        ],
+        "content_unformatted": [
+            "pre",
+            "textarea"
+        ]
+    }
+}
