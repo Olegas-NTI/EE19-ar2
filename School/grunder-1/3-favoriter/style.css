@@ -1,0 +1,45 @@
+
+h1 {
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #323232;
+    background-color: #A8A8A8; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    align-content: center;
+    padding-top: 20px;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+    background-color: #C8C8C8;
+
+}
+
+h1 {
+    background-color: #404040;
+}
+
+
+ul {
+    display: inline-block;
+    text-align: center;
+}
+
+ol {
+    display: inline-block;
+    text-align: center;
+}

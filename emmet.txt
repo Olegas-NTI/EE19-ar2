@@ -1,0 +1,47 @@
+. - skapar class inom ett HTML tag
+
+# - skapar id inom ett HTML tag 
+exempel button#call-me = <button id="call-me"> </button>
+
+> - som en path till ett annat HTML tag
+
+* - gånger den ska upprepas
+
+lorem"SIFFRA" - skapar random text med antalet ord man väljer. Exempelvis lorem9
+========================================================
+--------------------------------------------------------
+ul>li*4      
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+--------------------------------------------------------
+
+
+--------------------------------------------------------
+button#call-me 
+
+<button id="call-me"> </button>
+--------------------------------------------------------
+
+
+--------------------------------------------------------
+button#call-me 
+
+<button id="call-me"> </button>
+--------------------------------------------------------
+
+--------------------------------------------------------
+h1.website-name 
+
+<h1 class="website-name"> </h1>
+--------------------------------------------------------
+
+--------------------------------------------------------
+lorem20
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quae at, fuga earum eligendi nam provident. Commodi voluptatem voluptatibus deleniti!
+--------------------------------------------------------

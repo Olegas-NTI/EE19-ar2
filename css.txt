@@ -1,0 +1,50 @@
+background-attachment: fixed; // På fast plats även om man scrollar
+background-attachment: scroll; // På fast plats men inte om man scrollar
+
+
+
+
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+
+ISTÄLLET FÖR ATT SKRIVA SÅ
+body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+MAN KAN SKRIVA SÅ:
+
+body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+CSS BORDERS
+
+The border-style property specifies what kind of border to display.
+
+The following values are allowed:
+
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+
+BORDER SIZING
+
+border-width: NUMBER + CSS Unit 
+Example: 
+border-width: 15px 
+border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+
+BORDER COLOR
+
+border-color: name/HEX/RGB/HSL
+
