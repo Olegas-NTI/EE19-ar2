@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    background-image: url("./media/earth.jpg");
+    
+}
+
+h1 {
+    font-family: 'Arima Madurai', cursive;
+    color: white;
+    font-size: 100px;
+    width: 600px;
+    margin-left: 100px;
+    
+}
