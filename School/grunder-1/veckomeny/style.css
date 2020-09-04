@@ -1,0 +1,39 @@
+body {
+    color: #424041;
+}
+
+table {
+    border-spacing: 10px;
+    background-color: #FBE9E7;
+    width: 100%;
+}
+
+caption {
+    background-image: url("./media/pattern.jpg");
+    font-size: 50px;
+    padding: 20px;
+    height: 100%;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+th {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+tr {
+    padding: 10px;
+    background-color: #ebdad8;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+td img {
+    width: 100%;
+}

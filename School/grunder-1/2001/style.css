@@ -1,7 +1,5 @@
 body {
-    background-color: black;
-    background-image: url("./media/earth.jpg");
-    
+    background: #000 url("./media/earth.jpg") no-repeat -1000px -400px;
 }
 
 h1 {
@@ -9,6 +7,5 @@ h1 {
     color: white;
     font-size: 100px;
     width: 600px;
-    margin-left: 100px;
-    
+    margin-left: 400px;
 }
