@@ -1,11 +1,14 @@
 body {
     color: #424041;
+    background-color: #f5edfa;
 }
 
 table {
     border-spacing: 10px;
     background-color: #FBE9E7;
     width: 100%;
+    border: 2px solid black;
+    border-width: 0px 2px 2px 2px;
 }
 
 caption {
@@ -13,13 +16,16 @@ caption {
     font-size: 50px;
     padding: 20px;
     height: 100%;
-    border: 1px solid black;
-    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    border: solid black;
+    border-width: 2px 2px 0px 2px;
+    color: #000;
 }
 
 th {
     padding: 10px;
     border: 1px solid black;
+    border-radius: 7px;
 }
 
 tr {
@@ -32,8 +38,4 @@ td {
     text-align: center;
     border: 1px solid black;
     border-radius: 7px;
-}
-
-td img {
-    width: 100%;
 }
