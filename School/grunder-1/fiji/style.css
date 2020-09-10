@@ -1,0 +1,44 @@
+body {
+    background: url(./media/fiji-island.jpg) no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    margin-left: 100px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-left: 100px;
+}
+
+p {
+    display: inline-block;
+    margin-left: 750px;
+    font-size: 30px;
+    border: 3px white solid;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgba(2,2,115, 0.2);
+}
+
+.link-text {
+    color: white;
+    text-decoration: none;
+}
+
+.link-text:hover {
+    font-size: 30.5px;
+}
+
+.box {
+    border: white 1px solid;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 500px;
+    background-color: rgba(0,0,225, 0.2);
+}   
+

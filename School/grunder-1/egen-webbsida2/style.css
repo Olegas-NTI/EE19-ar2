@@ -1,0 +1,26 @@
+body {
+    background: url(./media/madisonbeer.jpg) no-repeat;
+    background-size: 100%;
+}
+
+h1 {
+    margin-left: 80px;
+    color: pink;
+    font-family: 'Mali', cursive;
+    font-size: 50px;
+}
+
+p {
+    width: 500px;
+    margin-left: 80px;
+    border: 1px solid pink;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 192, 203, 0.356);
+    color: white;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    font-style: italic;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
