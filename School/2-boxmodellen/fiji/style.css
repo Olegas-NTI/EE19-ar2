@@ -8,21 +8,23 @@ body {
 h1 {
     font-size: 100px;
     margin-left: 100px;
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 45px;
     margin-left: 100px;
 }
 
 p {
     display: inline-block;
-    margin-left: 750px;
+    margin-left: 650px;
     font-size: 30px;
     border: 3px white solid;
     border-radius: 15px;
-    padding: 10px;
-    background-color: rgba(2,2,115, 0.2);
+    padding: 10px 40px;
+    background-color: rgba(253, 167, 223,0.6);
+    text-transform: uppercase;
 }
 
 .link-text {
@@ -33,12 +35,4 @@ p {
 .link-text:hover {
     font-size: 30.5px;
 }
-
-.box {
-    border: white 1px solid;
-    border-radius: 10px;
-    margin-left: 50px;
-    margin-right: 500px;
-    background-color: rgba(0,0,225, 0.2);
-}   
 
