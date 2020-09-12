@@ -6,16 +6,16 @@ body {
 }
 
 table {
-    margin-left: 10%;
+    margin-left: 15%;
     margin-top: 100px;
     text-align: center;
     border-collapse: collapse;
-    box-shadow: 20px 20px 128px -10px rgba(255,255,255,1);
-    
+    box-shadow: 20px 20px 188px -10px rgba(255,255,255,1);
 }
 
 caption {
     color: white;
+    font-weight: bold;
     background: #29497D;
     text-align: center;
     padding: 20px 500px;
@@ -30,16 +30,19 @@ td img {
 }
 
 .lag {
-    padding: 0px 200px;
+    padding: 0px 100px;
 }
 
 th {
-    padding: 10px 40px;
+    padding: 10px 20px;
     background-color: #4876B9;
 }
 
 td {
     background-color: #F5F5F5;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0px;
+}
+
+.gimg {
+    padding: 10px 30px;
 }
