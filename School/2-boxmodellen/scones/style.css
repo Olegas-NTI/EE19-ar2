@@ -1,0 +1,62 @@
+body {
+    background: url(./media/bg.jpg) center;
+    background-size: cover;
+    color: white;
+}
+
+
+.recept-box {
+    width: 800px;
+    margin-top: 100px;
+    margin-left: 300px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 10px orange;
+    border-radius: 30px ;
+    padding: 40px 40px;
+    box-shadow: 2px 2px 100px 5px white;
+}
+
+
+h1, h2 {
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2px;
+    color: #F7A940;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+li, p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+ul {
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+h2, ul {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+h1, .andra-mening {
+    line-height: 30px;
+}
+
+.andra-mening {
+    padding-bottom: 25px;
+}
+
+
+ul, li {
+    list-style-type: none;
+    padding: 0;
+}
