@@ -6,8 +6,7 @@ body {
 }
 
 table {
-    margin-left: 15%;
-    margin-top: 100px;
+    margin: 100px auto 0px auto;
     text-align: center;
     border-collapse: collapse;
     box-shadow: 20px 20px 188px -10px rgba(255,255,255,1);
@@ -25,11 +24,6 @@ td img {
     width: 60px;
 }
 
-
-.logo {
-    padding: 0px 10px;
-}
-
 .lag {
     padding: 0px 100px;
 }
@@ -39,8 +33,7 @@ th {
     background-color: #4876B9;
 }
 
-td {
-    background-color: #F5F5F5;
+td, .logo {
     padding: 10px 0px;
 }
 
@@ -54,6 +47,14 @@ i {
 }
 
 .fa-customize {
-    color: red;
     font-size: 20px;
+    color: red;
+}
+
+.l2, .l4, .l6 {
+    background-color: #f1f1f1;
+}
+
+.l1, .l3, .l5 {
+    background-color: #ffffff;
 }
