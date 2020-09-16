@@ -25,8 +25,9 @@ td img {
     width: 60px;
 }
 
+
 .logo {
-    padding-left: 0px 10px;
+    padding: 0px 10px;
 }
 
 .lag {
@@ -45,4 +46,14 @@ td {
 
 .gimg {
     padding: 10px 30px;
+}
+
+i {
+    font-size: 20px;
+    color: green;
+}
+
+.fa-customize {
+    color: red;
+    font-size: 20px;
 }
