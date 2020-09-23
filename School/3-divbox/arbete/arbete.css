@@ -1,0 +1,99 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sida1 {
+    background-image: url(./media/floral.jpg);
+}
+
+.sida2 {
+    background-image: url(./media/floral2.jpg);
+}
+
+.sida3 {
+    background-image: url(./media/floral3.jpg);
+}
+
+.sida4 {
+    background-image: url(./media/floral4.jpg);
+}
+
+.sida5 {
+    background-image: url(./media/floral5.jpg);
+}
+
+.sida6 {
+    background-image: url(./media/floral6.jpg);
+}
+
+div {
+    width: 580px;
+    margin: 100px auto 0px auto;
+    padding: 50px;
+}
+
+.text-box1 {
+    background-color: #3F3D44;
+    border: dashed #63595E 12px;
+    color: #D8C28A;
+}
+.text-box2 {
+    background-color: #19191b;
+    border: dashed #A80511 12px;
+    color: #A83143;
+}
+.text-box3 {
+    background-color: #19191b;
+    border: dashed #B48F47 12px;
+    color: #B48F47;
+}
+.text-box4 {
+    background-color: #010101;
+    border: dashed #63595E 12px;
+    color: #CDC0AF;
+}
+.text-box5 {
+    background-color: #283845;
+    border: dashed #344b5e 12px;
+    color: #D7AC77;
+}
+.text-box6 {
+    background-color: #FDEDE5;
+    border: dashed #596A7E 12px;
+    color: #596A7E;
+}
+
+.text-box6 {
+    padding: 30px 50px 50px 50px;
+}
+
+h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 80px;
+}
+
+p {
+    font-family: 'Gentium Basic', serif;
+    font-size: 35px;
+    padding: 10px 0px;
+}
+
+a {
+    font-size: 50px;
+    color: #D8AD78;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:hover {
+    color: #947754;
+}
