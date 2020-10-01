@@ -21,7 +21,6 @@ body {
     margin: 0px auto 0px auto;
     padding: 50px 70px;
     background: rgba(255, 255, 255, 0.7);
-    text-align: center;
 }
 
 .post {
@@ -29,6 +28,7 @@ body {
     padding: 15px;
     margin-bottom: 30px;
     border-radius: 2px;
+    line-height: 40px;
 }
 
 img {
@@ -58,6 +58,7 @@ p {
 
 .credits {
     font-size: 12px;
+    text-align: center;
 }
 
 hr {
