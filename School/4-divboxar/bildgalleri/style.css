@@ -29,6 +29,11 @@ body {
     margin-bottom: 30px;
     border-radius: 2px;
     line-height: 40px;
+    text-align: right;
+}
+
+.p2 {
+    text-align: left;
 }
 
 img {
@@ -64,4 +69,8 @@ p {
 hr {
     visibility: hidden;
     clear: both;
+}
+
+.img2 {
+    float: right;
 }
