@@ -1,3 +1,6 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /* Enkel CSS-reset */
 html {
     box-sizing: border-box;
@@ -10,55 +13,88 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     padding: 0;
 }
 
+:root {
+    --lightblackish: #39373f;
+    --lightgrayish: #484650;
+    --royalblueish: rgb(75, 71, 141);
+    --navcolor1: rgb(36, 34, 73);
+    --navcolor2: rgb(51, 49, 85);  
+}
+
+
+/* Sidans utseende */
 body {
-    background-color: #39373f;
+    background-color: var(--lightblackish);
     font-family: 'Poppins', sans-serif;
     color: white;
 }
 
 .kontainer {
-    width: 800px;
+    width: 950px;
     margin: 0px auto;
     text-align: center;
-    background-color: #484650;
+    background-color: var(--lightgrayish);
     padding: 25px;    
 }
 
-figure {
-    margin-bottom: 30px;
+.kontainer h1 {
+    margin-bottom: 20px;
 }
 
-img {
-    width: 350px;
-}
-
-.cuz {
-    width: 550px;
-}
-
-.nle {
+.kontainer figure {
+    background-color: white;
     width: 400px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 2px;
 }
 
-.scriptonite {
-    width: 600px;
+.kontainer figure figcaption {
+    color: var(--lightblackish);
 }
 
-p {
+.kontainer img {
+    width: 100%;
+}
+
+.kontainer p {
     padding-bottom: 25px;
 }
 
-ul {
-    margin-bottom: 50px;
-    list-style: none;
-}
-
-a {
+.kontainer p a {
     text-decoration: none;
     color: paleturquoise;
 }
 
-.currentLink {
-    color: red;
-    background-color: #000000;
- }
+.kontainer ul {
+    margin-bottom: 50px;
+    list-style: none;
+}
+
+.kontainer ul li {
+    display: inline;
+}
+
+.kontainer ul a {
+    color: white;
+    text-decoration: none;
+    background-color: var(--navcolor1);
+    padding: 10px 25px;
+    margin-left: 5px;
+    border-radius: 3px;
+    display: inline-block;
+    width: 170px;
+}
+/* Aktiv och pekarens effekter */
+.kontainer ul a:hover {
+    background-color: var(--navcolor2);
+}
+
+.kontainer ul a.aktiv {
+    background-color: var(--royalblueish);
+}
+
+.tack {
+    color: rgb(163, 157, 157);
+    font-size: 12px;
+}
