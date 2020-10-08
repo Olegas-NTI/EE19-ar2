@@ -1,0 +1,67 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Formulärets utseende */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    width: 600px;
+    margin: 30px auto;
+    background: rgb(162,48,209);
+    background: linear-gradient(90deg, rgba(162,48,209,1) 0%, rgba(155,89,182,1) 53%, rgba(142,68,173,1) 100%);
+    padding: 50px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 140px auto;
+    animation-name: formular;
+    animation-duration: 1s;
+}
+
+form label {
+    color: white;
+    font-size: 20px;
+}
+
+form input {
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #34495e;
+    color: white;
+    border-radius: 2px;
+    border: none;
+
+}
+
+form button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 8px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;    
+}
+
+form button:hover {
+    box-shadow: 0 0 10px #fff;
+}
+
+
+@keyframes formular {
+    from {linear-gradient(90deg, rgba(162,48,209,1) 0%, rgba(155,89,182,1) 53%, rgba(142,68,173,1) 100%); background: rgb(162,48,209);}
+    to {background: linear-gradient(90deg, rgba(39,227,118,1) 0%, rgba(46,204,113,1) 42%, rgba(39,174,96,1) 100%); background: rgb(39,227,118);}
+}
+
+::placeholder {
+    color: rgb(223, 223, 223);
+}
