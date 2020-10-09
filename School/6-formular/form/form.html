@@ -9,24 +9,24 @@
 </head>
 <body>
     <h1>Enkel formulär</h1>
-    <form action="">
+    <form>
         <label for="fnamn">Namn: </label><input id="fnamn" type="namn" placeholder="Förnamn">
         <label for="enamn">Efternamn: </label><input id="enamn" type="efternamn" placeholder="Efternamn">
         <label for="email">Mejl-adress: </label><input id="email" type="mail" placeholder="youremail@e-mail.com">
         <label for="m-nummer">Mobilnummer: </label><input id="m-nummer" type="mobilnummer" placeholder="+4600000000">
-        <label for="adress">Adress: </label><input id="adress" type="adress" placeholder="Efternamn">
+        <label for="adress">Adress: </label><input id="adress" type="adress" placeholder="Stockholmgatan 19">
         <label for="post-nr">Postnummer: </label><input id="post-nr" type="postnummer" placeholder="15337">
         <label>Kön</label>
         <div>
             <input type="radio" name="kön">Man
-            <input type="radio" name="kön" class="radiopoint">Kvinna
+            <input type="radio" name="kön">Kvinna
             <input type="radio" name="kön">Vill ej säga
         </div>
-        <label>Allergi</label>
+        <label>Chips/Kakor/Godis</label>
         <div>
-            <input type="checkbox">Man
-            <input type="checkbox">Kvinna
-            <input type="checkbox">Vill ej säga
+            <input type="checkbox">Chips
+            <input type="checkbox">Kakor
+            <input type="checkbox">Godis
         </div>
         <label>Hemland</label>
         <select>
@@ -40,7 +40,7 @@
             <option value="7">Annat</option>
         </select>
         <label>Meddelande</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea cols="30" rows="10"></textarea>
         <button>Skicka in</button>
     </form>
 </body>
