@@ -1,0 +1,467 @@
+/* CSS Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Lato:wght@400;700&display=swap');
+
+
+/* Scrollbar inställningar */
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #171a1d;
+    border-radius: 3px
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: #a8cfe2
+}
+
+/* Easy CSS-reset */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body inställningar för alla sidor */
+body {
+    background: rgb(56, 64, 80);
+    font-family: 'Lato', sans-serif;
+}
+
+/* Nav Bar inställningar */
+nav {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    min-height: 11vh;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: rgba(225, 94, 65, 0.9);
+}
+
+nav .logo h4 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 20px;
+    margin-left: 80px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+nav ul {
+    text-align: right;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul a {
+    margin: 0px 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: #d2dae2;
+}
+/* Ändrar färg när man har pekaren över */
+nav ul a:hover{
+    color: #485460;
+}
+/* Lägger specifik färg på länken man är på */
+.current {
+    color: #1e272e;
+}
+/* Specifika färger för varje sidas nav */
+.nav-eg {
+    background-color: #0A798C;
+}
+
+.nav-ms {
+    background-color: #8A1C96;
+}
+.nav-g {
+    background-color: #7158e2;
+}
+
+/* Lägger banner inställningar för alla sidor */
+.banner {
+    font-family: 'Henny Penny', cursive;
+    min-height: 90vh;
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.banner h1 {
+    color: #fff;
+    font-size: 160px;
+    padding-top: 10%;
+}
+
+.banner h3 {
+    color: white;
+    font-size: 40px;
+}
+
+/* Specifika banners på varje sida */
+.b-startpage {
+    background: url(./media/banner-sp.jpg);
+}
+
+.b-games {
+    background: url(./media/banner-g.jpg) no-repeat;
+    background-size: cover;
+}
+
+.b-easygame {
+    background: url(./media/banner-eg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.b-movies-series {
+    background: url(./media/banner-ms.jpg) no-repeat center;
+}
+
+/* Container inställningar */
+.container {
+    width: 1300px;
+    margin: 0px auto;
+}
+
+.container .firstblock {
+    margin: 0px auto;
+}
+
+
+.firstblock .fb-h1, table caption {
+    font-family: 'Henny Penny', cursive;
+    padding: 35px;
+    text-align: center;
+    color: #e15f41;
+    font-size: 40px;
+}
+
+.firstblock {
+    margin: 0px auto;
+}
+
+.fb-cards {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.firstblock img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.fb-text {
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.fb-text h1 {
+    color: #e15f41;
+    margin-bottom: 12px;
+}
+
+.fb-card {
+    border: 5px #e77f67 solid;
+    border-radius: 20px;
+    background-color: #222f3e;
+}
+
+/* Table inställningar */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border: 5px #e77f67 solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th, td {
+    padding: 10px 20px;
+    border: 3px white solid;
+    font-size: 20px;
+}
+
+td {
+    color: white;
+    background-color: #636e72;
+    transition: ease-in .2s;
+}
+
+th {
+    width: 300px;
+    color: #e77f67;
+    background-color: #2d3436;
+}
+
+.r-source {
+    width: 20%;
+}
+
+td:hover {
+    background-color: #b2bec3;
+    color: #2d3436;
+}
+
+.table-2 {
+    margin-bottom: 80px;
+}
+/* Komma tillbaka till toppen inställningar */
+.dbtt-div {
+    min-height: 80px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+/* Komma tillbaka till toppen textens inställningar */
+.cbtt {
+    font-size: 30px;
+    padding: 20px;
+    background-color: #e15f41;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Spel sidan */
+.losning {
+    background-color: #384050;
+    float: right;
+}
+
+.losning a{
+    color: #384050;
+    padding: 0px 0px 40px 20px;
+}
+
+.game-h1 {
+    font-size: 50px;
+    padding: 30px 0px 10px 0px;
+    text-align: center;
+    color: white;
+}
+
+.enkel-game {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+    margin-bottom: 15px;
+    grid-row: 3;
+    gap: 20px;
+    justify-content: center;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    padding: 20px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-framsida, .flip-box-baksida {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-box-framsida {
+    background-color: #0A798C;
+    color: white;
+}
+
+.flip-box-baksida {
+    background-color: #2d3436;
+    color: #0A798C;
+    transform: rotateY(180deg);
+}
+
+.flip-box h2 {
+    margin: 25%;
+}
+/* Sidan när man klarar spelet inställningar */
+.finished-container{
+    text-align: center;
+}
+
+.finish-h1 {
+    font-size: 80px;
+    padding: 200px 0px 10px 0px;
+    color: white;
+}
+.finish-h3{
+    color: #e77f67;
+    font-size: 40px;
+}
+
+.finish-p {
+    margin: 20px;
+}
+
+.finish-p a{
+    color: white;
+    text-decoration: underline #e15f41;
+    font-size: 25px;
+    padding: 5px;
+}
+
+/* Form konstruktion */
+form{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    width: 700px;
+    padding: 30px 25px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+label, input, select, textarea{
+    margin: 5px;
+    padding: 5px;
+}
+
+input, textarea{
+    border: none;
+    border-radius: 2px;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    min-height: 5vh;
+    max-width: 317.5px;
+    padding: 10px 5px;
+    margin: 25px 0px 25px 0px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+button, label{
+    color: #fff;
+}
+
+label{
+    font-size: 20px;
+}
+::placeholder, select {
+    font-size: 15px;
+}
+
+/* Specifierar formulären med hjälp av dubbelklasser. */
+.games-form{
+    background-color: #7158e2;
+
+}
+
+.games-form button{
+    background-color: #4b38a0;
+}
+
+.ms-form {
+    background-color: #8A1C96;
+}
+.ms-form button {
+    background-color: #64126d;
+}
+
+.ms-form select{
+    color: #64126d;
+    font-weight: bold;
+}
+
+.secondblock{
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    grid-template-columns: 55% 45%;
+    justify-content: center;
+    height: 100%;
+}
+
+.secondblock .sb-img img {
+    width: 100%;
+}
+
+.secondblock .sb-text {
+    width: 100%;
+    font-size: 40px;
+    color: white;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.secondblock .sb-txt2{
+    border-color: #8A1C96;
+}
+
+.secondblock .sb-txt1{
+    border-color: #7158e2;
+}
+
+.secondblock .sb-text .sb-button{
+    text-align: center;
+}
+
+.secondblock .sb-text a { 
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 2px solid;
+    border-radius: 10px;
+    transition: ease-in-out .3s;
+}
+
+.secondblock .sb-text .sb-a2{
+    border-color: #8A1C96;
+}
+
+.secondblock .sb-text .sb-a2:hover{
+    background-color: #8A1C96;
+}
+
+.secondblock .sb-text .sb-a1{
+    border-color: #7158e2;
+}
+
+.secondblock .sb-text .sb-a1:hover{
+    background-color: #7158e2;
+}
+
+.secondblock .sb-text, .sb-img{
+    margin-bottom: 20px;
+}

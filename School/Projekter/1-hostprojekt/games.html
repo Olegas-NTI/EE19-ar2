@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Höstprojekt - Halloween</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-g">
+        <div class="logo">
+            <h4>Halloween Projekt</h4>
+        </div>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./games.html" class="current">Games</a></li>
+            <li><a href="./movies-series.html">Movies & Series</a></li>
+            <li><a href="./easy-game.html">Easy Game</a></li>
+        </ul>
+    </nav>
+    <div class="banner b-games">
+        <h1>Games</h1>
+    </div>
+    <div class="secondblock">
+        <div class="sb-img">
+            <img src="./media/amongus-fb.png" alt="gamepic">
+        </div>
+        <div class="sb-text sb-txt1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid velit fugit facere, dolor illo vero voluptatibus minus voluptatum sequi delectus neque, distinctio impedit in, at autem adipisci nemo quibusdam quasi!</p>
+            <p class="sb-button"><a href="#" class="sb-a1">Se mer</a></p>
+        </div>
+        <div class="sb-img">
+            <img src="./media/dbd-fb1.jpg" alt="gamepic">
+        </div>
+        <div class="sb-text sb-txt1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid velit fugit facere, dolor illo vero voluptatibus minus voluptatum sequi delectus neque, distinctio impedit in, at autem adipisci nemo quibusdam quasi!</p>
+            <p class="sb-button"><a href="#" class="sb-a1">Se mer</a></p>
+        </div>
+        <div class="sb-img">
+            <img src="./media/dokidoki-fb.png" alt="gamepic">
+        </div>
+        <div class="sb-text sb-txt1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid velit fugit facere, dolor illo vero voluptatibus minus voluptatum sequi delectus neque, distinctio impedit in, at autem adipisci nemo quibusdam quasi!</p>
+            <p class="sb-button"><a href="#" class="sb-a1">Se mer</a></p>
+        </div>
+    </div>
+    <div class="container"> 
+        <form class="games-form">
+            <label for="firstname">Firstname:</label><input type="fname" id="firstname" placeholder="Ex: Olegas">
+            <label for="lastname">Latsname:</label><input type="lname" id="lastname" placeholder="Ex: Sevcenko">
+            <label for="phone-number">Phone Number:</label><input type="phone-number" id="phone-number" placeholder="Ex: +460000000">
+            <label for="e-mail">Mail-Adress:</label><input type="mail-adress" id="e-mail" placeholder="Ex: olegas.sevcenko@gmail.com">
+            <label for="yvoting">Your vote:</label>
+            <select id="yvoting">
+                <option value="0" selected="false" disabled="disabled">Choose the game</option>
+                <option value="0">Among Us</option>
+                <option value="0">Dead by Daylight</option>
+                <option value="0">Doki Doki LC</option>
+            </select>
+            <label for="message">Message:</label>
+            <textarea id="message" cols="30" rows="10" placeholder="Write your message here:"></textarea>
+            <div></div>
+            <button>Send in</button>
+        </form>
+    </div>
+</body>
+</html>
