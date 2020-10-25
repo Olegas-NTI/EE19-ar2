@@ -71,24 +71,26 @@ nav ul a {
 }
 /* Ändrar färg när man har pekaren över */
 nav ul a:hover{
-    color: #485460;
+    color: #b5bec7;
 }
 /* Lägger specifik färg på länken man är på */
 .current {
     color: #1e272e;
+    font-weight: bold;
 }
 /* Specifika färger för varje sidas nav */
-.nav-eg {
-    background-color: #0A798C;
+.nav-fs{
+    background-color: rgba(225, 94, 65, 0.9);
 }
-
 .nav-ms {
-    background-color: #8A1C96;
+    background-color: rgba(138, 28, 150, 0.9);
 }
 .nav-g {
-    background-color: #7158e2;
+    background-color: rgba(113, 88, 226, 0.9);
 }
-
+.nav-eg {
+    background-color: rgba(10, 121, 140, 0.9);
+}
 /* Lägger banner inställningar för alla sidor */
 .banner {
     font-family: 'Henny Penny', cursive;
@@ -320,7 +322,7 @@ td:hover {
     color: white;
 }
 .finish-h3{
-    color: #e77f67;
+    color: #0A798C;
     font-size: 40px;
 }
 
@@ -330,7 +332,7 @@ td:hover {
 
 .finish-p a{
     color: white;
-    text-decoration: underline #e15f41;
+    text-decoration: underline #0A798C;
     font-size: 25px;
     padding: 5px;
 }
@@ -380,7 +382,9 @@ label{
     font-size: 15px;
 }
 
-/* Specifierar formulären med hjälp av dubbelklasser. */
+/* Specifierar formulären med hjälp av dubbelklasser. 
+ms- movie series sidans formulär
+games- game sidans formulär */
 .games-form{
     background-color: #7158e2;
 
