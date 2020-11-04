@@ -4,7 +4,7 @@
 
 /* Scrollbar inställningar */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 7px;
     background-color: #171a1d;
     border-radius: 3px
 }
@@ -45,13 +45,15 @@ nav {
     background-color: rgba(225, 94, 65, 0.9);
 }
 
-nav .logo h4 {
+nav .logo h4 a {
     color: #fff;
     font-weight: 900;
     font-size: 20px;
     margin-left: 80px;
     letter-spacing: 5px;
     text-align: center;
+    text-decoration: none;
+    padding: 10px;
 }
 
 nav ul {
@@ -67,11 +69,11 @@ nav ul a {
     margin: 0px 20px;
     padding: 10px;
     text-decoration: none;
-    color: #d2dae2;
+    color: #fff;
 }
 /* Ändrar färg när man har pekaren över */
 nav ul a:hover{
-    color: #b5bec7;
+    color: #49495e;
 }
 /* Lägger specifik färg på länken man är på */
 .current {
@@ -98,6 +100,7 @@ nav ul a:hover{
     background-size: cover;
     text-align: center;
     background-repeat: no-repeat;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 70%, 70% 92%, 30% 92%, 0 70%, 0 0);
 }
 
 .banner h1 {
@@ -107,28 +110,31 @@ nav ul a:hover{
 }
 
 .banner h3 {
-    color: white;
+    color: #fff;
     font-size: 40px;
 }
 
 /* Specifika banners på varje sida */
 .b-startpage {
-    background: url(./media/banner-sp.jpg);
+    background: url(./media/banner-sp.jpg) fixed;
+    background-attachment: fixed;
 }
 
 .b-games {
-    background: url(./media/banner-g.jpg) no-repeat;
+    background: url(./media/banner-g.jpg) no-repeat fixed;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .b-easygame {
-    background: url(./media/banner-eg.jpg) no-repeat;
+    background: url(./media/banner-eg.jpg) no-repeat fixed;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .b-movies-series {
-    background: url(./media/banner-ms.jpg) no-repeat center;
+    background: url(./media/banner-ms.jpg) no-repeat center fixed;
 }
 
 /* Container inställningar */
@@ -328,6 +334,8 @@ td:hover {
 
 .finish-p {
     margin: 20px;
+    padding: 0px;
+    transition: transform .2s;
 }
 
 .finish-p a{
@@ -337,13 +345,17 @@ td:hover {
     padding: 5px;
 }
 
+.finish-p:hover{
+    transform: scale(1.1);
+}
+
 /* Form konstruktion */
 form{
     display: grid;
     grid-template-columns: 25% 75%;
     width: 700px;
     padding: 30px 25px;
-    margin: 20px auto;
+    margin: 20px auto 40px auto;
     border-radius: 5px;
 }
 
