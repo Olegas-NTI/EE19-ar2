@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script> 
+        // Läs in födelseår
+        var födelseår;
+        födelseår = parseInt(prompt("Vad är år just nu")); 
+        
+        // Läs in ålder
+        var ålder;
+        ålder =  parseInt(prompt("Hur gammal är du?"));
+
+        // Svara vilket år blir man 20
+        var svaret;
+        svaret = 20 - ålder + födelseår;
+        alert("Du blir tjugo år " + svaret)
+    </script>
+</body>
+</html>
