@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hoyah</h1>
+    <script>
+        var hmångaDagar = parseInt(prompt("Hur många dagar tänker du köra"));
+        var hmångaKilometer = parseFloat(prompt("Hur många kilometer planerar du köra"));
+        var totalHyra = 500 + (hmångaDagar*400) + (hmångaKilometer*5)
+        alert(`Totala hyran ligger med ${totalHyra} kr om du väljer köra ${hmångaKilometer} km och ${hmångaDagar} dagar`);
+    </script>
+</body>
+</html>
