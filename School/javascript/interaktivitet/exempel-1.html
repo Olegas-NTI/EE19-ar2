@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Lyssna på klick</h1>
+        <button onclick="frågaNamn()">Klicka inte på mig</button>
+    </div>
+    <script>
+        function frågaNamn() {
+            var namn = prompt("Vad är ditt lösenord")
+            var checkNamn = prompt("Confirma lösenord")
+                if (namn == checkNamn) {
+                    alert("Haha, nu vet jag din lösenord")
+                }
+                else {
+                    alert("Lösenord stämmer inte. Vänligen ange igen.")
+                    frågaNamn()
+                }
+        }
+    </script>
+</body>
+</html>

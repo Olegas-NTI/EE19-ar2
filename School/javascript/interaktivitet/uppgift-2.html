@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Lyssna på klick</h1>
+        <button onclick="namn()">Ange namn</button>
+        <button onclick="adress()">Ange adress</button>
+    </div>
+    <script>
+        var namnFråga;
+        var adressFråga;
+        function namn() {
+            namnFråga = prompt("Vad heter du?")
+        }
+        function adress() {
+            adressFråga = prompt("Vad är ditt namn")
+            alert(`Ditt namn är ${namnFråga} och du bor på ${adressFråga}`)
+        }
+    </script>
+</body>
+</html>
