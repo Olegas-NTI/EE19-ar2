@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Kul på webbsida</h1>
+        <img onclick="eMejl()" src="./bilder/husky.jpg" alt="husky bild">
+    </div>
+    <script>
+        function eMejl() {
+            var eMejl = prompt("Skriv ditt mejl adress: ")
+            var nyttMejl = eMejl.replace('@', '(at)');
+            alert(`Ditt mejl-adress är ${nyttMejl}`)
+        }
+    </script>
+</body>
+</html>
