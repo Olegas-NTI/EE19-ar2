@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>White and Black</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <button onclick="makeBackground1()">First Option</button>
+        <button onclick="makeBackground2()">Second Option</button>
+        <button onclick="makeBackground3()">Third Option</button>
+
+    </div>
+    <script>
+        function makeBackground1() {
+            document.body.style.backgroundImage = "url(./bilder/arab-coffee.jpg)";
+            document.body.style.backgroundSize = "cover";
+        }
+        function makeBackground2() {
+            document.body.style.backgroundImage = "url(./bilder/ireland-coffee.jpg)";
+            document.body.style.backgroundSize = "cover";
+        }
+        function makeBackground3() {
+            document.body.style.backgroundImage = "url(./bilder/italian-coffee.jpg)";
+            document.body.style.backgroundSize = "cover";
+        }
+        
+
+    </script>
+</body>
+</html>

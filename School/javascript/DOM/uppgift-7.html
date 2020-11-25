@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>White and Black</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <button onclick="showText()">Wanna see a text?</button>
+
+    </div>
+    <script>
+        function showText() {
+            document.body.innerHTML = "<p> When the tongue lies, the eyes tell the truth - George Horace Lorimer </p> <button onclick=\"makeitBlack()\"> Gör det svart</button>"
+        }
+        function makeitBlack() {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+        }
+        
+
+    </script>
+</body>
+</html>
