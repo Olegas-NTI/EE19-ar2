@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>if och else satsen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>if och else sats</h1>
+        <button onclick="ageCheck()">För att komma rätt anpassat webbsida till dig</button>
+    </div>
+    <script>
+        function ageCheck() {
+            var yourAge = parseInt(prompt("Ange ett lösenord"));
+            if (yourAge >= 20) {
+                window.location.href = "https://www.systembolaget.se/";
+            } else {
+                window.location.href = "https://svtplay.se";
+            } 
+        }
+    </script>
+</body>
+</html>

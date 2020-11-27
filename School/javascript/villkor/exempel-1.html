@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inloggning sida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Ändra bakgrundsfärg</h1>
+        <button onclick="inloggning()">Ändra bakgrund</button>
+    </div>
+    <script>
+        function inloggning() {
+            var lösenord = prompt("Ange ett lösenord");
+            if (lösenord === "123") {
+                alert("Du är inloggad!");
+            } else {
+                    alert("Du skrev fel lösenord, var inte ledsen, jag har något söt att visa till dig");
+                    window.location.href = "https://external-preview.redd.it/kQdoF8zjjXS4epPGT_wlj8NiRDHfzZO3nZKG61vmJPM.gif?format=mp4&s=8a70f2d16a2491e5b3c1d96554aaeaa5ce442dd4";
+            }
+        }
+    </script>
+</body>
+</html>

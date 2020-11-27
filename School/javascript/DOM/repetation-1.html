@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Ändra bakgrundsfärg</h1>
+        <button onclick="nyBakgrund()">Ändra bakgrund</button>
+    </div>
+    <script>
+        function nyBakgrund() {
+            var colorCheck = prompt("Ange en färg bre");
+            console.log(colorCheck)
+            document.body.style.cssText = "background:" + colorCheck;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vad är det för dag idag?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Vad är det för dag idag?</h1>
+        <button onclick="weekActivity()">Tryck för att börja.</button>
+    </div>
+    <script>
+        function weekActivity() {
+            var vilkenDag = prompt("Vad är det för dag idag?")
+            if (vilkenDag == "fredag" || vilkenDag == "Fredag") {
+                window.location.href = "https://estrella.se";
+            } else if (vilkenDag == "lördag" || vilkenDag == "Löndag") {
+                window.location.href = "https://netflix.com";
+            } else if (vilkenDag == "söndag" || vilkenDag == "Söndag") {
+                window.location.href = "https:ikea.se"
+            } else if (vilkenDag == "måndag" || vilkenDag == "Måndag") {
+                window.location.href = "https://classroom.google.com"
+            } 
+        }
+    </script>
+</body>
+</html>
