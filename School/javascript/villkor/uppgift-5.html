@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Vad är det för dag idag?</h1>
+        <button onclick="tävling()">Tryck för att börja.</button>
+    </div>
+    <script>
+
+        function tävling() {
+            var frågaÅlder = parseInt(prompt("Hur gammal är du?"));
+            if (frågaÅlder >= 16 && frågaÅlder <= 19) {
+               alert("Du är perfekt, du är välkommen!") 
+            } else if (frågaÅlder > 19) {
+                alert("Du är för gammal, gå.")
+            } else if (frågaÅlder < 16) {
+                alert("Du är för ung, gå.")
+            }
+        }
+
+    </script>
+</body>
+</html>

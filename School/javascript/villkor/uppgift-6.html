@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Vad är det för dag idag?</h1>
+        <button onclick="tävling()">Tryck för att börja.</button>
+    </div>
+    <script>
+
+        function tävling() {
+            var mängd = parseInt(prompt("Hur många datorer har du?"));
+            if (mängd == 1) {
+                alert(`Du har bara en dator`);
+            } else if (mängd > 1) {
+                alert(`Du har ${mängd} datorer`);
+            }
+        }
+
+    </script>
+</body>
+</html>

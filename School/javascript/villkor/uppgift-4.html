@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Vad är det för dag idag?</h1>
+        <button onclick="vadHeter()">Tryck för att börja.</button>
+    </div>
+    <script>
+
+        function vadHeter() {
+            var namnet = prompt("Vad heter du");
+            if (namnet == "Tova") {
+                alert("Du har namnsdagen idag");
+            } else if (namnet == "Abbe") {
+                alert("Du har namnsdag imorgon");
+            } else {
+                alert("Du har varken namnsdag vare sig idag eller imorgon");
+            }
+        }
+
+    </script>
+</body>
+</html>
