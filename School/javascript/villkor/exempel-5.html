@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exempel 5 (Bra övning med villkor)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Flödesschema för problemlösning</h1>
+        <p>Respresenterar bilden:</p>
+        <img src="https://gblobscdn.gitbook.com/assets%2F-MJHUgRHwxIeNZIOHjFB%2F-MNgsVD2rfiisgRU9wqB%2F-MNgtSsRZNCmTzLcG5J-%2Fimage.png?alt=media&token=354a31c6-3c88-49f9-97f6-1d6cba44c7f5"
+            alt="Flödesschema för problemlösning">
+        <button onclick="starta()">Starta din resa!</button>
+    </div>
+    <script>
+
+        function skylla() {
+            kanSkylla = prompt("Kan du skylla på någon?");
+            if (kanSkylla = "j") {
+                alert("Problemet är löst!")
+            } else {
+                alert("Stackars jävel!")
+            }
+        }
+        function starta() {
+            alert("Svara alltid med antingen j (betyder ja) eller n (betyder nej)")
+            var svar1 = prompt("Fingerar fanskapet? (j/n) ?");
+            if (svar1 == "j") {
+                alert("Håll fingrarna borta!");
+                alert("Problemet är löst");
+            } else {
+                var svar2 = prompt("Har du micklat med den?");
+                if (svar2 == "j") {
+                    alert("Jävla spånhund!");
+                    svar3 = prompt("Vet någon om det?")
+                    if (svar3 == "j") {
+                        alert("Stackars jävel!");
+                        skylla();
+                    } else {
+                        alert("Knip käft!");
+                        alert("Problemet är löst");
+                    }
+                } else {
+                    svar5 = prompt("Får du fan för det?")
+                    if (svar5 == "j") {
+                        alert("Stackars jävel");
+                        skylla();
+                    } else {
+                        alert("Släng det i soporna!")
+                        alert("Problemet löst!")
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
