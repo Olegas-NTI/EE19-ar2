@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="/School/javascript/spelet/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Spam check</h1>
+        <button onclick="spamCheck()">Confirma dig!</button>
+    </div>
+    <script>
+        var försök = 4;
+        function spamCheck() {
+        
+        var slumpTal1 = Math.floor(Math.random() * 9 + 1);
+        var slumpTal2 = Math.floor(Math.random() * 9 + 1);
+        var confirmed = slumpTal1 + slumpTal2
+
+        var check = prompt(`Det är en spam check! \nDu ska svara vad är ${slumpTal1} + ${slumpTal2}`);
+        if (check == confirmed) {
+            alert("Grattis! Du är välkommen här!")
+        }   else if (check != confirmed) {
+            var försök = försök - 1;
+            alert(`Du gissade fel, du får ${försök} försök till och med nya tal!`);
+            while (försök != 0) {
+                spamCheck();
+            } if (försök == 0){
+                alert("Du är inte välkommen här")
+                window.location.href = "https://disneyland.disney.go.com/"
+            }
+        }  
+        }
+    </script>
+</body>
+</html>

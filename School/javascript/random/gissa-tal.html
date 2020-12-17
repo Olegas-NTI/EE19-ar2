@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="/School/javascript/spelet/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Gissa ett tal</h1>
+        <button onclick="börjaSpel()">Kör!</button>
+    </div>
+    <script>
+        var slumpTal = Math.floor(Math.random() * 10 + 1);
+        function börjaSpel() {
+
+        var gissning = prompt("Gissa ett tal mellan 1 och 10!");
+        if (slumpTal == gissning) {
+            alert("Grattis! Du vann")
+        }   else if (gissning < slumpTal) {
+            alert(`Din tal (${gissning}) var för liten, välj en större tal!`);
+            börjaSpel()
+        } else if (gissning > slumpTal) {
+            alert(`Din tal (${gissning}) var för stor, välj en mindre tal!`);
+            börjaSpel()
+        } 
+        }
+    </script>
+</body>
+</html>

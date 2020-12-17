@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Logiska operatorer</h1>
+
+    <script>
+        var vecka = prompt("Vilket vecka är det?");
+        var dag = prompt("Vilket dag är det?");
+/*      Båda ska stämma för att det ska vara sann
+        if (vecka == "51" && dag == "onsdag") {
+            alert("Det är sant!");
+        } else {
+            alert("Det är falskt!");
+        } */
+        /* En eller båda ska stämma för villkoren ska vara sann  */
+        if (vecka == "51" || dag == "onsdag") {
+            alert("Det är sant!");
+        } else {
+            alert("Det är falskt!");
+        }
+    </script>
+</body>
+</html>

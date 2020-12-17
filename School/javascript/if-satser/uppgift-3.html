@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uppgift 2b</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Ålder Schema</h1>
+        <p>Respresenterar bilden:</p>
+        <img src="https://gblobscdn.gitbook.com/assets%2F-MJHUgRHwxIeNZIOHjFB%2F-MNgoi9aSIKbRA1So2jl%2F-MNgpFPqSBUaRbaawRWA%2Fimage.png?alt=media&token=80038399-2a74-4a31-b85d-20421e163eb0"
+            alt="Schema">
+        <button onclick="ageCheck()">Starta din resa!</button>
+    </div>
+    <script>
+        /* funkar inte */
+        function ageCheck() {
+            q = parseInt(prompt("Hur gammal är du? Ange med siffra"));
+            if (q >= 11 && q < 13) {
+                alert("Se vissa filmer på bio utan vuxet sällskap");
+                if (q >= 13 && q < 15); {
+                alert("Utföra lättare arbete")
+                } if (q >= 15 && q < 16); {
+                alert("Köra moped")
+                } if (q >= 16) {
+                alert("Övningsköra bil");
+                } else {
+                alert("Ledsen plutten, du är för liten");
+                }
+            }  
+        }
+    </script>
+</body>
+</html>

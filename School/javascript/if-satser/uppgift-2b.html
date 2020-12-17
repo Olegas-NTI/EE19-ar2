@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uppgift 2b</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Flödesschema</h1>
+        <p>Respresenterar bilden:</p>
+        <img src="https://gblobscdn.gitbook.com/assets%2F-MJHUgRHwxIeNZIOHjFB%2F-MNgoi9aSIKbRA1So2jl%2F-MNgpFPqSBUaRbaawRWA%2Fimage.png?alt=media&token=80038399-2a74-4a31-b85d-20421e163eb0"
+            alt="Flödesschema för att ers't">
+        <button onclick="lampan()">Starta din resa!</button>
+    </div>
+    <script>
+        function lampan() {
+        alert("Svara bara med j/n.")
+        alert("Lampan fungerar inte");
+        var q1 = prompt("Är lampan inkopplat?");
+        if (q1 == "n" || q1 == "nej") {
+            alert("Koppla in lampan.");
+        } else {
+            var q2 = prompt("Är glödlampan utbränd?");
+            if (q2 == "j" || q2 == "ja") {
+                alert("Ersätt glödlampan")
+            } else {
+                alert("Köp en ny lampa")
+            }
+        }
+        }
+    </script>
+</body>
+</html>

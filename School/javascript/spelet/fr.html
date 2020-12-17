@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spelet typ Zork</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>God handling (Munk Edition)</h1>
+        <p>Denna spelet kommer lära dig vad som är rätt eller fel om man är Budhistisk munk!</p>
+        <p>I början av spelet så har du 10 liv, om du överlever med åtminstone 8 hjärtor så klar du spelet!</p>
+        <img src="./bild.jpg" alt="munk">
+        <button onclick="game()">Kör!</button>    
+    </div>
+
+
+    <script>
+        function game() {
+            var q1 = prompt("Får man laga mat? (j/n)");
+            var hjärtor = 10;
+            if (q1 == "j") {
+                var hjärtor = hjärtor - 1;
+                alert(`Tyvärr så har du fel här! \nDu har ${hjärtor} liv kvar.`)
+            } else if (q1 == "n")  {
+                alert(`Bra! Du är duktig på det här! \nDu har fortfarande ${hjärtor} hjärtor kvar`)
+            }
+            var q2 = prompt("Får man ha sex? (j/n)");
+            if (q2 == "j") {
+                var hjärtor = hjärtor - 1;
+                alert(`Oops, tyvärr så kan dom inte! \nDu har ${hjärtor} liv`)
+            } else if (q2 == "n")  {
+                alert(`Bra! Gå vidare så! \n${hjärtor} hjärtor kvar!`)
+            }
+            var q3 = prompt("Får man le? (j/n)");
+            if (q3 == "j") {
+                alert(`Det är ett måste! \nDu har ${hjärtor} hjärtor kvar`)
+            } else if (q3 == "n")  {
+                var hjärtor = hjärtor - 1;
+                alert(`Kom igen >:(, alla människor i världen ska vara glada! \nDu har ${hjärtor} hjärtor kvar`)
+            }
+            var q4 = prompt("Får man dricka mjölk? (j/n)");
+            if (q4 == "j") {
+                alert(`Såklart får man dricka mjölk! \nDu har fortfarande ${hjärtor} kvar`)
+            } else if (q4 == "n")  {
+                var hjärtor = hjärtor - 1;
+                alert(`Det är aldrig förbjudet att dricka mjölk! \nDu har ${hjärtor} hjärtor kvar`)
+            }
+            var q5 = prompt("Får man dricka vinn? (j/n)");
+            if (q5 == "j") {
+                var hjärtor = hjärtor - 1;
+                alert(`Man får inte dricka alkohol/droger (inklusive öl) om man är munk. \nDu har förlorat en hjärta, du har ${hjärtor} kvar`)
+            } else if (q5 == "n")  {
+                alert(`Bra! Munkar vill inte slapna av och använda droger för att få bra känslor, annars så är man svag. \nDu har fortfarande ${hjärtor} hjärtor!`)
+            }
+            alert("Som du fick veta tidigare så kan inte budhistisk munk laga mat. \n*VIKTIGT* Han får den från andra människor som offrar maten till honom.")
+            var q6 = prompt("Ska munken tacka människa som offrar mat till honom? (j/n)");
+            if (q6 == "j") {
+                var hjärtor = hjärtor - 1;
+                alert(`Enligt dom så ska personen som offrar maten tacka munken! För att dom har fått bra karma genom att munken gav dom möjlighet göra en god handling så tackar dom honom som att han gav dom bra karma.  \n Du förlorar ett hjärta! Du har ${hjärtor} stycken kvar`)
+            } else if (q6 == "n")  {
+                var hjärtor = hjärtor + 1;
+                alert(`Du har rätt! Munken ska aldrig tacka personen som offrade mat till honom, det är personen som offrar ska tacka honom att han gav personen möjlighet att utföra en god handling`)
+                alert(`Det var ett klurig fråga därför har du fått en hjärta till för att du är duktig! Du har ${hjärtor} hjärtor kvar.`)
+            }
+            var q7 = prompt("Får munken mindre regler att följa än nunnor? (j/n)");
+            if (q7 == "j") {
+                alert(`Det är sant, MNunnor ska följa 331 regler jämfört med 227 som munkar ska följa! \nDu har ${hjärtor} hjärtor kvar`)
+            } else if (q7 == "n")  {
+                var hjärtor = hjärtor - 1;
+                alert(`Det är fel, Nunnor ska följa 331 regler jämfört med 227 som munkar ska följa! \nDu har fortfarande ${hjärtor} hjärtor.`)
+            }
+            var q8 = prompt("Klär munken sig i oranga kläder för att dom gillar apelsiner? (j/n)");
+            if (q8 == "j") {
+                alert(`Jag är shockad att du valde fel här, men du får inga minus poäng. \nDu har fortfarande ${hjärtor} hjärtor`)
+            } else if (q8 == "n")  {
+                var hjärtor = hjärtor - 1;
+                alert(`Självklart så är det inte anledningen! \nDu har fortfarande ${hjärtor} hjärtor.`)
+            }
+
+            if (hjärtor >= 8) { 
+                alert(`Gratis! Du fick ${hjärtor}/10 hjärtor, detta betyder att du vann spelet och har goda kunskaper om budhismens munkar!`) 
+            } else if (hjärtor < 8) { 
+                alert(`Tyvärr så har du förlorat spelet \nDu fick ${hjärtor}/10 totalt. Men lycka till nästa gång!`)
+            }
+        }
+    </script>
+</body>
+</html>
