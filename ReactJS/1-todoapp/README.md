@@ -1,9 +1,11 @@
+# Hostad min första applikation ToDo!
+Länk : https://react-todo-46cb2.web.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Link to the hosted app!
-Länk : https://react-todo-46cb2.web.app/
+
 
 ## Available Scripts
 
