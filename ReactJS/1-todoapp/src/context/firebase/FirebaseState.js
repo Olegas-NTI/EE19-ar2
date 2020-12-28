@@ -34,7 +34,7 @@ export const FirebaseState = ({children}) => {
     const note = {
       title, date: new Date().toJSON()
     }
-
+    // throw new Error('Du kan kolla om appen kan detetecta errors')
     try {
       const res = await axios.post(`${url}/notes.json`, note)
       const payload = {

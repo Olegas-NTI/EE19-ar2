@@ -18,7 +18,7 @@ export const Form = () => {
             setValue('')
         } else {
             alert.show('Var vänlig och skriv din anteckning!')
-        }
+        }  
     }
 
     
