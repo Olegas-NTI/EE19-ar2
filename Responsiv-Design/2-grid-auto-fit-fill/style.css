@@ -1,0 +1,40 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    /* 
+    CONCLUSION
+    Auto fit använder tom plats som inte används medans auto-fill skapar tomma kolumner och använder bara det som sägs                           
+    */
+    grid-gap: 2em;
+}
+
+.block {
+    padding: 2em;
+    border-radius: .3em;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .1);
+}
+
+.block p {
+    margin-top: 0;
+    margin-bottom: .8em;
+}
+
+
+
+
+
+
+ 
