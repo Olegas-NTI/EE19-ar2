@@ -6,7 +6,7 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="https://www.flaticon.com/premium-icon/icons/svg/2115/2115955.svg"" alt="Logo" width="112" height="112">
+    <img src="https://www.flaticon.com/premium-icon/icons/svg/2115/2115955.svg" alt="Logo" width="112" height="112">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
