@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Spam check</h1>
+        <input class="fråga" type="text" disabled><br>
+        <input class="gissning" type="text"><button onclick="check()">Submit!</button>
+        <input class="svar" type="text">
+    </div>
+    <script>
+        const frågaElement = document.querySelector(".fråga")
+        const gissningElement = document.querySelector(".gissning")
+        const svarElement = document.querySelector(".svar")
+        var slumptal1 = Math.floor(Math.random() * 6 + 1);
+        var slumptal2 = Math.floor(Math.random() * 6) + 1;
+        var svar = slumptal1 + slumptal2
+        frågaElement.value = `Vad är ${slumptal1} + ${slumptal2}?`
+        function check() {
+            if (gissningElement.value == svar) {
+                svarElement.value = "Du har rätt!"
+            } else {
+                svarElement.value = "Du har fel!"
+            }
+        }
+    </script>
+</body>
+</html>

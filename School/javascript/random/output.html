@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Slutbetyg</h1>
+        <button onclick="slutbetyg()">Gissa slutbetyg</button>
+        <br>
+        <input type="text" disabled>
+    </div>
+    <script>
+            const elementInput = document.querySelector("input")
+
+            function slutbetyg() {
+            var slumptal = Math.floor(Math.random() * 6);
+            
+            if (slumptal == 0) {
+                elementInput.value = `Svaret är F 😞`;
+            } else if (slumptal == 1) {
+                elementInput.value = `Svaret är E 😐`;
+            } else if (slumptal == 2) {
+                elementInput.value = `Svaret är D 🙂`;
+            } else if (slumptal == 3) {
+                elementInput.value = `Svaret är C 😄`;
+            } else if (slumptal == 4) {
+                elementInput.value = `Svaret är B 😁`;
+            } else if (slumptal == 5) {
+                elementInput.value = `Svaret är A 🥰`;
+            }
+        }
+    </script>
+</body>
+</html>

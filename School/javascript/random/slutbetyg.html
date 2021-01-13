@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Slutbetyg</h1>
+        <button onclick="slutbetyg()">Gissa slutbetyg</button>
+    </div>
+    <script>
+/*         
+            Variabler // fel sätt
+
+            function slutbetyg() {
+            var slumptal = Math.floor(Math.random() * 6);
+
+            if (slumptal == 0) {
+                var slumptal = "F 😞"
+            } else if (slumptal == 1) {
+                var slumptal = "E 😐"
+            } else if (slumptal == 2) {
+                var slumptal = "D 🙂"
+            } else if (slumptal == 3) {
+                var slumptal = "C 😄"
+            } else if (slumptal == 4) {
+                var slumptal = "B 😁"
+            } else if (slumptal == 5) {
+                var slumptal = "A 🥰"
+            }
+
+
+            alert("Din betyg är " + slumptal)   
+        } */
+/*         
+            Rätt sätt, lite svårare att läsa än switches
+            
+            function slutbetyg() {
+            var slumptal = Math.floor(Math.random() * 6);
+
+            if (slumptal == 0) {
+                alert("Du fick F 😞") 
+            } else if (slumptal == 1) {
+                alert("Du fick E 😐")
+                var slumptal = "E 😐"
+            } else if (slumptal == 2) {
+                alert("Du fick D 🙂")
+            } else if (slumptal == 3) {
+                alert("Du fick C 😄")
+            } else if (slumptal == 4) {
+                alert("Du fick B 😁")
+            } else if (slumptal == 5) {
+                alert("Du fick A 🥰")
+            }
+        } */
+
+        
+        function slutbetyg() {
+            var slumptal = Math.floor(Math.random() * 6);
+        switch(slumptal) {
+        case 0:
+            alert("Du fick F 😞") 
+            break;
+        case 1:
+            alert("Du fick E 😐")
+            break;
+        case 2:
+            alert("Du fick D 🙂")
+            break;
+        case 3:
+            alert("Du fick C 😄")
+            break;
+        case 4:
+            alert("Du fick B 😁")
+            break;
+        case 5:
+            alert("Du fick A 🥰")
+            break;
+        default:
+            // Tomt
+        }
+        }
+
+        
+
+    </script>
+</body>
+</html>
