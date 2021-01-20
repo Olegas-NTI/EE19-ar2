@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="frefreshClock()">
+    <div class="kontainer">
+        <div class="klocka">
+            <p id="tiden"></p>
+        </div>
+    </div>
+    <script>
+        /* Refreshar koden varje 0.5 sekund */
+        setInterval(frefreshClock, 500);
+        /* Funktionen som laddas när man öppnar webbsidan*/
+        function frefreshClock() {
+            /* Får hela datumet med hjälp av new date  */
+            var tid = new Date();
+            /* Tar ut timmar från new Date */
+            var t = tid.getHours();
+            /* Tar ut minutes från new Date */
+            var m = tid.getMinutes();
+            /* Tar ut sekunder från new Date */
+            var s = tid.getSeconds();
+            /* Istället för 22 så visas det klockan 10 exempelvis*/
+            if (t > 12) {
+                t = t - 12;
+            } 
+
+            if (t == 0) {
+                t = 12;
+            }
+            /* Om klockan är 3 så visas det 03 istället för bara 3 */
+            if (t < 10) {
+                t = `0${t}`
+            }
+            /* Exemplevis det blir 13:03 istället för 13:3 */
+            if (m < 10) {
+                m = `0${m}`
+            }
+            /* Exemplevis det blir 13:13:02 istället för 13:13:2 */
+            if (s < 10) {
+                s = `0${s}`
+            }
+            /* Få ut tiden på p taggen genom att hitta Id'n 'tiden' */
+            document.getElementById('tiden').innerHTML = `${t}:${m}:${s}`; 
+        }
+
+    </script>
+</body>
+</html>

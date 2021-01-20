@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300&display=swap');
+
+
+/* font-family: 'Lobster', cursive;
+font-family: 'Open Sans', sans-serif; */
+
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80") no-repeat;
+    background-size: cover;
+}
+
+.kontainer {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.klocka {
+    height: 50vh;
+    width: 80%;
+    margin-top: 20vh;
+    background-color: rgba(140, 122, 230, 0.6);
+    border: #ecf0f1 1px solid;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 4em;
+    width: 70%;
+    color: white;
+    margin: 2rem auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 5px;
+    background-color: #2f3640;
+    border-radius: 2px;
+    padding: 1rem 1.5rem;
+    user-select: none;
+    transition: .2s ease-out;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+}
+
+.klocka:hover > p {
+    box-shadow: 0px 0px 20px 5px white;
+    transform: scale(1.05);
+}
