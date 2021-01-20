@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <button onclick="genereraDatum()">Generera datumet</button>
+    
+        <input type="text" class="dateInput">
+    </div>
+    
+    
+    <script>
+        function genereraDatum() {
+            var dagensDatum = new Date();
+            outputDate = document.querySelector(".dateInput")
+            outputDate.value = dagensDatum;     
+        }
+        
+        
+    </script>
+</body>
+</html>
