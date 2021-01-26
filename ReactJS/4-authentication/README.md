@@ -2,6 +2,9 @@
 
 Länk : https://react-auth-dev-54e30.web.app
 
+## Appen använder firebase
+
+![Firebase Screenshot](https://i.imgur.com/ScVZmDG.png)
 
 ## Authorised Domains
 
