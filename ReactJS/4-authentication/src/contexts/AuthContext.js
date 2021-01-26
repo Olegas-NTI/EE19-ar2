@@ -29,11 +29,11 @@ export function AuthProvider({ children }) {
     }
 
     function uppdateraMejl(email) {
-        return currentUser.uppdateraMejl(email)
+        return currentUser.updateEmail(email)
     }
 
     function uppdateraLösenord(password) {
-        return currentUser.uppdateraLösenord(password) 
+        return currentUser.updatePassword(password) 
     }
 
     useEffect(() =>  {
