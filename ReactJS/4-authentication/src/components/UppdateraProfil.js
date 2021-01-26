@@ -65,7 +65,7 @@ export default function UppdateraProfil() {
                 </Card.Body>    
             </Card>
             <div className="w-100 text-center mt-2">
-                <Link to='/logga-in'>Avbryta</Link>
+                <Link to='/'>Avbryta</Link>
             </div>
         </>
     )

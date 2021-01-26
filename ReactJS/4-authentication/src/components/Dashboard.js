@@ -25,7 +25,7 @@ export default function Dashboard() {
                     <h2 className="text-center mb-4">Profil</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <strong>Mejl-adress:</strong> {currentUser.email}
-                    <Link to="/uppdatera-profil" className="btn btn-primary w-100 mt-3">Uppdatera profil</Link>
+                    <Link to="/uppdatera-profil" className="btn btn-primary w-100 mt-3 btn-dark">Uppdatera profil</Link>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
