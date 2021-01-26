@@ -1,3 +1,13 @@
+# Denna appen är hostad.
+
+Länk : https://react-auth-dev-54e30.web.app
+
+
+## Authorised Domains
+
+localhost är inte med som authorised domain därför det kommer inte funka använda appen om ni clone'ar repo.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
