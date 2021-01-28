@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Oändlig loop</h1>
+        <button onclick="loopa()">Är du redo?</button>
+    </div>
+    <script>
+        function loopa() {
+            var varv = 0;
+
+            while (true) {
+                console.log("varv", varv)
+                varv++;
+            }
+        }
+    </script>
+</body>
+</html>

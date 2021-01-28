@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Loopar</h1>
+        <button onclick="loopa()">Loopa!</button>
+        <p></p>
+    </div>
+    <script>
+        function loopa() {
+            for (i = 50; i >     0; i--) {
+                document.querySelector("p").innerHTML += i + "</br>";
+            }
+        }
+    </script>
+</body>
+</html>

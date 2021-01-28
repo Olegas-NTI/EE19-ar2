@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Oändlig loop</h1>
+        <button onclick="loopa2()">Är du redo?</button>
+    </div>
+    <script>
+/*         var meningen = Math.ceil(Math.random() * 50 + 1)
+
+        console.log(meningen)
+        var health = 5;
+
+        function loopa() {
+            while (true) {
+                alert(`Du har ${health} chanser kvar`)
+                health--;
+                
+                var gissning = prompt("Vad är meningen med livet?")
+
+                if (health <= 0) {
+                    
+                    break;
+                }
+
+                if (gissning == meningen)  {
+                    alert("Rätt du är smart.")
+                    break;
+                } else {
+                    alert("Nope, försök igen.")
+                    
+                }
+            }
+        }
+ */     var meningen = Math.ceil(Math.random() * 50 + 1)
+
+        console.log(meningen)
+        var health = 0;
+
+        function loopa2() {
+            while (health < 5) {
+                var gissning = prompt("Vad är meningen med livet?")
+                
+                health++;
+
+                if (gissning == meningen)  {
+                    alert("Rätt du är smart.")
+                    break;
+                } else {
+                    alert("Nope, försök igen.")
+                    
+                }
+            }
+        }
+    </script>
+</body>
+</html>

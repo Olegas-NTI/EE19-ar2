@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Uppgift 1</h1>
+        <button onclick="börja()">Starta!</button>
+    </div>
+    <script>
+    function börja() {
+    let rikaste = "ryssland";    
+        while (true) {
+            let fråga = prompt("Vilket är Europas folkrikaste land?")
+            if (fråga == rikaste) {
+                alert("Grattis, du har rätt!")
+                break;
+            } else if (fråga == null) {
+                alert("Du avbröt quizen. Hejdå.")
+                break;
+            } else {
+                alert("Fortsätt vidare")
+            }
+        }  
+    }
+    </script>
+</body>
+</html>
