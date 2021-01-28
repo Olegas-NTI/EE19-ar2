@@ -2,6 +2,9 @@
 
 Länk : https://react-auth-dev-54e30.web.app
 
+## Användare sparas på firebase
+
+![Firebase Screenshot](https://i.imgur.com/ScVZmDG.png)
 
 ## Authorised Domains
 
