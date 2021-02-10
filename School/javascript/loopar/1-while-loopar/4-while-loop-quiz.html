@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <p>Gissa rätt på 5 frågor</p>
+        <button onclick="quiz()"></button>
+    </div>
+    <script>
+        function quiz() {
+            /* Slumpa fram en fråga */
+            var slumptal = Math.ceil(Math.random() * 5)
+            var poäng = 0;
+            if (slumptal == 1) {
+                var gissning = prompt("Vilket nische parfym märke folk gillar mest för kvalite och pris?\n(1 - tom ford; 2 - parfym de marly; 3 - maison francis kurkdjian)");
+                if (gissning == 1 || gissning == 2) {
+                    poäng++;
+                } else {
+                    poäng--;
+                }
+            }
+            if (slumptal == 2) {
+                var gissning = prompt("Vilket parfym dom flesta tjejer gillar på killar?\n(1 - burberry london; 2 - chanel allure homme sport; 3 - sauvage dior)");
+                if (gissning == 3) {
+                    poäng++;
+                }
+            }
+            if (slumptal == 3) {
+                var gissning = prompt("Vilket parfym har blivit otroligt känd 2021?\n(1 - tom ford noir extreme; 2 - killian angels share; 3 - creed millesime imperial)");
+                if (gissning == 2) {
+                    poäng++;
+                }
+            }
+            if (slumptal == 4) {
+                var gissning = prompt("Vad är bästa parfym för arbete och andra olika situationer?\n(1 - maison kurkdjian baccarat rouge 540; 2 - molecule o1; 3 - prada l'homme)");
+                if (gissning == 3 || gissning == 2) {
+                    poäng++;
+                } else {
+                    poäng -= 5;
+                }
+            }
+            if (slumptal == 5) {
+                var gissning = prompt("Vilket parfym har varit populär i väldigt lång tid och folk fortfarande älskar den?\n(1 - calvin klein the one; 2 - creed aventus ; 3 - molecule o1)");
+                if (gissning == 2) {
+                    poäng++;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
