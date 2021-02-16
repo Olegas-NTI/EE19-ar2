@@ -1,0 +1,18 @@
+<input type="text" class="input">
+
+
+2 ways with inputs: 
+
+const texten = "Programmet fungerar!"
+
+Long hard to read method:
+
+document.querySelector(".input").value = texten
+
+Easy to read way:
+
+const inputElement = document.querySelector(.input)
+inputElement.value = texten
+
+
+
