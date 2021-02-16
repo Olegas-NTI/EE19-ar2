@@ -16,3 +16,10 @@ inputElement.value = texten
 
 
 
+<p>Kul</p>
+<button onclick="jätte()">Jätte kul!</button>
+    <script>
+        function jätte() {
+        const pElement = document.querySelector("p")
+        pElement.innerHTML = "Jätte kul!";
+        }
