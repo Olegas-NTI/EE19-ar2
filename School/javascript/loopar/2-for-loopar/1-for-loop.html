@@ -3,26 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>For loops</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="kontainer">
-
+        <h1>Loopar</h1>
+        <button onclick="loopa()">Loopa!</button>
+        <p></p>
     </div>
     <script>
-        for (i = 1; i < 10; i++) {
-            document.write("<p>i = " + i + "</p>")
-            console.log("Detta är rad", i);
+        function loopa() {
+            for (i = 50; i > 0; i--) {
+                document.querySelector("p").innerHTML += i + "</br>";
+            }
         }
-        /* for (statement 1, statement 2, statement 3)
-        Statement 1 körs en gång innan körningen av denna kod blocken.
-
-        Statement 2 säger condition vid körningen av kod blocken.
-
-        Statement 3 körs varje gång efter kod blocken har blivit kört.
-        
-         */
     </script>
 </body>
 </html>
