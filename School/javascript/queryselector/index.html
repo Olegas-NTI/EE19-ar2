@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Query Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Läsa från sidan</h1>
+        <h2>Input</h2>
+        
+        <div>
+            <label>Ange förnamn <input type="text" class="fnamn" placeholder="T.ex: Olegas    "></label>
+        </div>
+        <div>
+            <label>Ange efternamn <input type="text" class="enamn" placeholder="T.ex: Sevcenko"></label>
+        </div>
+        <div>
+            <label>Välj datum <input type="date" class="dateS"></label>
+        </div>
+        <button onclick="read()">Skicka</button>
+        <p></p>
+    </div>
+    <script>
+        function read() {
+        const eInputFnamn = document.querySelector(".fnamn")
+        const eInputEnamn = document.querySelector(".enamn")
+        const dateSelector = document.querySelector(".dateS")
+        var fnamn = eInputFnamn.value;
+        var enamn = eInputEnamn.value;
+        var datumet = dateSelector.value;
+        console.log(fnamn, enamn); 
+        document.querySelector("p").innerHTML = `Ditt förnamn är ${fnamn} och efternamn är ${enamn} och datumet är ${datumet}`
+        }
+    </script>
+</body>
+</html>
