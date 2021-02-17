@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Får du ta körkort?</h1>
+        <h2>Input</h2>
+        <div>
+            <label>Ange namn</label> <input class="fnamn" type="text">
+        </div>
+        <div>
+            <label>Ange efternamn</label> <input class="enamn" type="text">
+        </div>
+        <div>
+            <label>Ange ålder</label> <input class="age" type="number">
+
+        </div>
+
+        <button onclick="check()">Visa om man får ta körkort</button>
+
+        <h2>Output</h2>
+        <label>Svar: </label><input class="answer" type="text" disabled>
+    </div>
+    <script>
+        const fnamnElement = document.querySelector(".fnamn")
+        const enamnElement = document.querySelector(".enamn")
+        const ageElement = document.querySelector(".age")
+        const answerElement = document.querySelector(".answer")
+        
+        function check() {
+            if (ageElement.value >= 18) {
+                answerElement.value = `Grattis ${fnamnElement.value} ${enamnElement.value}! du får ta körkortet`
+            } else {
+                answerElement.value = `Förlåt du är inte över 18 än`
+            }
+        }
+    </script>
+</body> 
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Hemligt nummer?</h1>
+        <h2>Input</h2>
+        <label>Skriv lösenord</label> <input class="ipass" type="password">
+
+        <button onclick="check()">Visa hemligt nummer</button>
+
+        <h2>Output</h2>
+        <label>Svar: </label><input class="ihidden" type="text" disabled>
+    </div>
+    <script>
+        const passwordElement = document.querySelector(".ipass")
+        const hiddenElement = document.querySelector(".ihidden")
+        const password = "123"
+        function check() {
+            if (passwordElement.value == password) {
+                hiddenElement.value = "+37061277774"
+            } else {
+                alert("Fel lösenord!")
+            }
+        }
+    </script>
+</body>
+</html>

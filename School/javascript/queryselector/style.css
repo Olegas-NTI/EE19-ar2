@@ -142,3 +142,6 @@ body {
 input{
     margin-bottom: 20px;
 }
+.answer {
+    width: 80%;
+}
