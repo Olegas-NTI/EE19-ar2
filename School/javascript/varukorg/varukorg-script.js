@@ -18,7 +18,8 @@ function removeValue() {
 const rutaPris = document.querySelector(".pris");
 const rutaAntal = document.querySelector("input");
 const rutaSumma = document.querySelector(".checkout");
-
+const knappPlus = document.querySelector(".plus");
+const knappMinus = document.querySelector(".minus");
 // Globala variabler
 var antal = rutaAntal.value;
 console.log("antal", antal);
@@ -41,5 +42,23 @@ rutaAntal.addEventListener("input", function() {
     summa = antal * pris;
 
     // Skriv ut nya summan
-    rutaSumma.textContent = summa;
+    rutaSumma.textContent = summa + " kr";
 });
+
+knappMinus.addEventListener("click", function () {
+    console.log("minus");
+    if (antal > 0) {
+        antal--;
+        summa = antal * pris;
+        rutaAntal.value = antal
+        rutaSumma.textContent = summa + " kr";   
+    }
+})
+
+knappPlus.addEventListener("click", function () {
+    console.log("plus");
+    antal++;
+    summa = antal * pris;
+    rutaAntal.value = antal
+    rutaSumma.textContent = summa + " kr";
+})
