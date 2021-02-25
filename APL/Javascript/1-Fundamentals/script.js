@@ -183,3 +183,151 @@ if (ålder == 18) {
     console.log("Värden stämmer inte ALLS");
 }
 */
+
+/* 
+const favorit = Number(prompt("Vad är ditt favorit nummer?"));
+console.log(favorit);
+console.log(typeof favorit);
+
+if (favorit === 16) {
+    console.log("Va kul! 16 är också min favorit nummer");
+} else if(favorit === 14) {
+    console.log(`Jag gillar 14 också!`);
+} else {
+    console.log(`Bra att du gillar nummer ${favorit}, jag personligen tycker om nummer 16 eller 14!`);
+} 
+
+if (favorit !== 16) console.log("Men varför inte 16?");
+*/
+
+//Booleans! && - and, 
+
+/* 
+const hasDriverLicense = true; //A
+const hasGoodVision = true; //B
+
+console.log(hasDriverLicense && hasGoodVision);
+console.log(hasDriverLicense || hasGoodVision);
+console.log(!hasDriverLicense);
+
+const isTired = true;
+const shouldDrive = hasDriverLicense && hasGoodVision && !isTired;
+
+if (shouldDrive) {
+    console.log("You can drive!");
+} else {
+    console.log("Someone else should drive!");
+} 
+*/
+
+
+
+////////////////////////////////////
+// Coding Challenge #3
+
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+3. BONUS 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉
+4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+GOOD LUCK 😀
+*/
+// Solution
+/* 
+const DolphinAverage = (97 + 112 + 101) / 3
+const KoalasAverage = (109 + 95 + 106) / 3
+
+
+if (DolphinAverage < 100) {
+    console.log("Dolphins can't contest because their average is lower than 100");
+}
+if (KoalasAverage < 100) {
+    console.log("Koalas can't contest because their average is lower than 100");
+}
+
+if (DolphinAverage > KoalasAverage) {
+    console.log("Dolphins average is higher than Koalas");
+} else if (KoalasAverage > DolphinAverage) {
+    console.log("Koalas average is higher than Dolphins");
+} else if (KoalasAverage === DolphinAverage) {
+    console.log("Draw! No winner, sowwy");
+}
+ */
+
+
+
+ // Switch statement *strict ===*
+
+/*  
+const day = "sunday"
+
+ switch(day) {
+    case 'monday':
+        console.log("It's monday!");
+        break;
+    case 'tuesday':
+        console.log("It's tuesday!");
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log("It's wednesday or thursday!");
+        break;
+    case 'friday':
+        console.log("It's friday!");
+        break;
+    case 'satuday':
+    case 'sunday':
+        console.log("Yay! Weekends!");
+        break;
+    default:
+        console.log("I'm not sure why but I can't understand your day of the week");
+}
+
+if (day === 'monday') {
+    console.log("It's monday!");
+} else if (day === 'tuesday') {
+    console.log("It's tuesday!");
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log("It's wednesday or thursday!");
+} else if (day === 'friday') {
+    console.log("It's friday!");
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log("Yay! Weekends!");
+} else {
+    console.log("I'm not sure why but I can't understand your day of the week");
+} 
+*/
+
+
+// Conditional Ternary Operator 
+/* 
+const age = 18;
+age >= 18 ? console.log("Your age is or higher than 18!") : console.log("Age is NOT higher than 23"); 
+
+const drink = age >= 18 ? 'Du får drycka alkohol' : 'Du får drycka vatten!'
+console.log(drink); 
+*/
+
+
+////////////////////////////////////
+// Coding Challenge #4
+
+/*
+Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+TEST DATA: Test for bill values 275, 40 and 430
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+GOOD LUCK 😀
+*/
+// Solution
+/* 
+const bill = 40;
+const tip = bill >= 50 <= 300 ? bill * 15/100 : bill * 20/100
+console.log(`The bill was $${bill} and the tip was $${tip}`); 
+*/
