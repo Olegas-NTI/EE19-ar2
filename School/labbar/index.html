@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Variabler och funktioner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Variabler och funktioner</h1>
+        <label>Användarnamn <input type="text" class="anamn"></label>
+        <label>Lösenord <input type="password" class="lösen"></label>
+        <button class="btn btn-warning">Kontrollera lösenordet</button>
+        <button class="btn btn-info">Demo</button>
+        <button class="btn btn-primary">Logga in</button>
+        <button class="btn btn-danger">Töm rutorna</button>
+        <label>Svar <textarea></textarea></label>
+    </div>
+    <script>
+        // Koden som körs först
+        // Element som vi behöver komma åt
+        const rutaAnamn = document.querySelector(".anamn");
+        const rutaLösen = document.querySelector(".lösen");
+        const knappKontroll = document.querySelector(".btn-warning");
+        const knappDemo = document.querySelector(".btn-info");
+        const knappLoggaIn = document.querySelector(".btn-primary");
+        const knappTöm = document.querySelector(".btn-danger");
+        const rutaSvar = document.querySelector("textarea");
+        
+        // Kod som körs när användaren klickar på knappen Logga in
+        knappLoggaIn.addEventListener("click", function () {
+            // Läs av användarnamnet och lagra i en lokal variabel
+            var anamn = rutaAnamn.value;
+            // Läs av lösenordet och lagra i en lokal variabel
+            var lösen = rutaLösen.value;
+            // Skriv ut användarnamnet i loggen
+            console.log(anamn);
+            // Skriv ut lösenordet i loggen
+            console.log(lösen);
+            // Skriv ut användarnamnet i rutaSvar
+            rutaSvar.value = `Användarsnamn: ${anamn}\nLösenord: ${lösen}\n`
+            // Skriv ut lösenordet i rutaSvar
+
+            // Är användarnamnet "admin" skriv ut "Användarnamn ok" i rutaSvar
+
+            // Är användarnamnet "admin" och lösenordet "super" skriv ut "Inloggad!" i rutaSvar
+            
+            // Annars skriv ut "Något är fel!"
+            anamn == "admin" && lösen == "super" ? rutaSvar.value = rutaSvar.value + "Inloggad!" : rutaSvar.value = rutaSvar.value + `Välkommen ${anamn} du är inloggad` 
+            // Är användarnamn (valfritt) och lösenord (valfritt) ifyllda
+            // Skriv "Välkommen ... du är inloggad" i rutaSvar
+
+        })
+        knappTöm.addEventListener("click", function () {
+            // Läs av användarnamnet och lagra i en lokal variabel
+            rutaAnamn.value = "";
+            rutaLösen.value = "";
+            rutaSvar.value = "";
+        })
+    </script>
+</body>
+</html>
