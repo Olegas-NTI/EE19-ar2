@@ -42,23 +42,35 @@
             console.log(lösen);
             // Skriv ut användarnamnet i rutaSvar
             rutaSvar.value = `Användarsnamn: ${anamn}\nLösenord: ${lösen}\n`
-            // Skriv ut lösenordet i rutaSvar
 
-            // Är användarnamnet "admin" skriv ut "Användarnamn ok" i rutaSvar
-
-            // Är användarnamnet "admin" och lösenordet "super" skriv ut "Inloggad!" i rutaSvar
-            
-            // Annars skriv ut "Något är fel!"
             anamn == "admin" && lösen == "super" ? rutaSvar.value = rutaSvar.value + "Inloggad!" : rutaSvar.value = rutaSvar.value + `Välkommen ${anamn} du är inloggad` 
-            // Är användarnamn (valfritt) och lösenord (valfritt) ifyllda
-            // Skriv "Välkommen ... du är inloggad" i rutaSvar
+
 
         })
+         // Kod som körs när användaren klickar på knappen Töm
         knappTöm.addEventListener("click", function () {
-            // Läs av användarnamnet och lagra i en lokal variabel
             rutaAnamn.value = "";
             rutaLösen.value = "";
             rutaSvar.value = "";
+        })
+
+        // Kod som körs när användaren klickar på knappen Kontrollera lösenordet
+        knappKontroll.addEventListener("click", function () {
+            var anamn = rutaAnamn.value;
+            var lösen = rutaLösen.value;
+            const längdAnamn = anamn.length
+            const securityAnamn = `Ditt namn är ${anamn} och är ${längdAnamn} lång. \n`
+            
+            const längdLösen = lösen.length
+            const securityLösen = `Ditt lösenord är ${lösen} och är ${längdLösen} lång. \n`
+
+            const varning = ["", "123", "12345"]
+            rutaSvar.value = lösen
+            
+            if (längdAnamn > 5) rutaSvar.value = securityAnamn + securityLösen + "Användarnamnet är minst 6 tecken långt \n"
+            if (längdLösen > 7) rutaSvar.value = rutaSvar.value + "Lösenordet är minst 8 tecken långt \n"  
+            lösen == varning[0] || lösen == varning[1] || lösen == varning[2] ? rutaSvar.value = rutaSvar.value + "Varning!" : rutaSvar.value = rutaSvar.value + "Bra lösenord!" 
+            
         })
     </script>
 </body>
