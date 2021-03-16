@@ -1,0 +1,27 @@
+* {
+  font-family: helvetica, sans-serif;
+  color: #2f3542;
+}
+
+.App { 
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product-grid {
+  width: 100%;
+}
+
+.StockEventsTable {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+}
+
+.product-block {
+  width: 80%;
+  background-color: #8854d0;
+  padding: 20px;
+  margin: 20px;
+}
