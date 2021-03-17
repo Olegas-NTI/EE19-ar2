@@ -6,7 +6,7 @@
     <title>Variabler och funktioner</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="rep.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="kontainer">
@@ -22,25 +22,26 @@
         // Element som vi behöver komma åt
         const rutaLösen1 = document.querySelector(".lösen1");
         const rutaLösen2 = document.querySelector(".lösen2");
-        const knappKontroll = document.querySelector(".btn-warning");
         const knappSpara = document.querySelector(".btn-primary");
+        const knappKontroll = document.querySelector(".btn-warning");
         const rutaSvar = document.querySelector("textarea");
 
         // Skapa global variabel lösen1
-
-
+        let lösen1 = rutaLösen1.value;
         // Kod som körs när användaren klickar på knappen Spara lösenordet
-
-            // Läs av lösenordet och lagra i den globala variabeln
-
-            // Skriv ut lösenordet i loggen
-
-            // Om lösenordet är kortare än 6 tecken skriv ut svaret
-            // Lösenordet för kort 
-            // Annars lösenordet ok
+        knappSpara.addEventListener("click", function () {
+            console.log("Du tryckte knappen");
+            lösen1 = rutaLösen1.value;
+            lösen1.length < 6 ? rutaSvar.value = `Lösenordet är för kort, skriv ${6-lösen1.length} tecken till att skapa säker lösenord` : rutaSvar.value = "Lösenordet är tillräckligt säker"
+        })
 
         // Kod som körs när användaren klickar på knappen Kontrollera lösenordet
-
+        knappKontroll.addEventListener("click", function () {
+            lösen1 = rutaLösen1.value;
+            lösen2 = rutaLösen2.value;
+            console.log(lösen1);
+            lösen1 == lösen2 ? rutaSvar.value = rutaSvar.value + "\nLösenorden stämmer" : rutaSvar.value = rutaSvar.value + "\nLösenorden stämmer INTE." 
+        })
             // Läs av lösenordet och lagra i en lokal variabel
 
             // Skriv ut lösenordet i loggen
