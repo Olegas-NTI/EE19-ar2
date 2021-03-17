@@ -2,6 +2,7 @@ const rutaNamn = document.querySelector("input");
 const meny = document.querySelector("select");
 const knapp = document.querySelector("button");
 const lista = document.querySelector("ul");
+const tabortKnapp = document.querySelector(".btn-outline-danger");
 cpulist = {
     ryzen : {
         cpu1: {
@@ -39,47 +40,51 @@ knapp.addEventListener("click", function () {
     console.log(namn);
     var cpu = meny.value;
     console.log(cpu);
-    
+
     if (cpu == "ryzen3") {
-        lista.innerHTML = 
+        lista.innerHTML = lista.innerHTML + 
         `<li class="list-group-item">
         <img src="${cpulist.ryzen.cpu1.url}">
          - ${cpulist.ryzen.cpu1.title}
         </li>`
     }
     if (cpu == "ryzen5") {
-        lista.innerHTML = 
+        lista.innerHTML = lista.innerHTML +
         `<li class="list-group-item">
         <img src="${cpulist.ryzen.cpu1.url}">
          - ${cpulist.ryzen.cpu3.title}
         </li>`
     }
     if (cpu == "ryzen7") {
-        lista.innerHTML = 
+        lista.innerHTML = lista.innerHTML +
         `<li class="list-group-item">
         <img src="${cpulist.ryzen.cpu3.url}">
          - ${cpulist.ryzen.cpu3.title}
         </li>`
     }
     if (cpu == "inteli3") {
-        lista.innerHTML = 
+        lista.innerHTML = lista.innerHTML +
         `<li class="list-group-item">
         <img src="${cpulist.intel.cpu1.url}">
          - ${cpulist.intel.cpu1.title}
         </li>`
     }
     if (cpu == "inteli5") {
-        lista.innerHTML = 
+        lista.innerHTML = lista.innerHTML +
         `<li class="list-group-item">
         <img src="${cpulist.intel.cpu1.url}">
          - ${cpulist.intel.cpu3.title}
         </li>`
     }
     if (cpu == "inteli7") {
-        lista.innerHTML = 
+        lista.innerHTML = lista.innerHTML +
         `<li class="list-group-item">
         <img src="${cpulist.intel.cpu3.url}">
          - ${cpulist.intel.cpu3.title}
         </li>`
     }
+})
+
+tabortKnapp.addEventListener("click", function () {
+    lista.innerHTML = "";
 })
