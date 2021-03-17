@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    background: #F9F6EB url("https://images.unsplash.com/photo-1597207837475-ea1f19435b50?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1832&q=80");
+}
+.kontainer {
+    width: 600px;
+    padding: 2em;
+    margin: 3em auto;
+    background: #fff;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #a0a0a0;
+}
+.kontainer #myCanvas {
+    border: 1px solid;
+}
+.kol2 {
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em;
+}
+.kol3 {
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1em;
+}
+.kol8 {
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-gap: 1em;
+}
+.kontainer h5 {
+    margin-top: 1em;
+}
+.kontainer label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 10px 0;
+    padding: 0;
+}
+.kontainer img {
+    width: 3em;
+}
+.kontainer ul {
+    font-size: 0.7em;
+}
