@@ -19,7 +19,6 @@ const openModal = function () {
 
 for (let i = 0; i < btnsOpenModal.length; i++) {
     btnsOpenModal[i].addEventListener("click", openModal);
-    console.log(btnsOpenModal[i]);
 }
 
 btnCloseModal.addEventListener("click", closeModal);
