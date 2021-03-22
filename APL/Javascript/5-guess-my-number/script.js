@@ -8,45 +8,47 @@ const displayMessage = function (message) {
     document.querySelector(".message").textContent = message;
 };
 
-document.querySelector(".check").addEventListener("click", function () {
-    const guess = Number(document.querySelector(".guess").value);
-    console.log(typeof guess, guess);
-    //When there is no input
-    if (!guess) {
-        displayMessage("🚫 Please enter a number!");
-    }
-    //When client guesses the right number
-    else if (guess === secretNumber) {
-        displayMessage("🥂 Congratulaitons!");
-        scoreSelector.textContent = score;
-        numberSelector.textContent = secretNumber;
-        document.querySelector("body").style.backgroundColor = "#60b347";
-        numberSelector.style.width = "30rem";
 
-        if (score > highscore) {
-            highscore = score;
-            document.querySelector(".highscore").textContent = highscore;
+const checkInput = function () {
+        const guess = Number(document.querySelector(".guess").value);
+        console.log(typeof guess, guess);
+        //When there is no input
+        if (!guess) {
+            displayMessage("🚫 Please enter a number!");
         }
-    }
-    //When client guessed wrong
-    else if (guess !== secretNumber) {
-        //When client has too high score
-        if (score > 1) {
-            displayMessage(guess > secretNumber ? "📈 Too high, -1 point!" : "📉 Too low, -1 point!");
-            score--;
+        //When client guesses the right number
+        else if (guess === secretNumber) {
+            displayMessage("🥂 Congratulaitons!");
             scoreSelector.textContent = score;
-        }
-        //When client has too low score
-        else {
-            displayMessage("☠ You lost the game!");
-            score = 0;
-            document.querySelector("body").style.backgroundColor = "#B33A3A";
-            scoreSelector.textContent = score;
-        }
-    }
+            numberSelector.textContent = secretNumber;
+            document.querySelector("body").style.backgroundColor = "#60b347";
+            numberSelector.style.width = "30rem";
 
-});
+            if (score > highscore) {
+                highscore = score;
+                document.querySelector(".highscore").textContent = highscore;
+            }
+        }
+        //When client guessed wrong
+        else if (guess !== secretNumber) {
+            //When client has too high score
+            if (score > 1) {
+                displayMessage(guess > secretNumber ? "📈 Too high, -1 point!" : "📉 Too low, -1 point!");
+                score--;
+                scoreSelector.textContent = score;
+            }
+            //When client has too low score
+            else {
+                displayMessage("☠ You lost the game!");
+                score = 0;
+                document.querySelector("body").style.backgroundColor = "#B33A3A";
+                scoreSelector.textContent = score;
+            }
+        }
 
+    };
+// Checks input on click
+document.querySelector(".check").addEventListener("click", checkInput)
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -76,3 +78,9 @@ playAgainSelector.addEventListener("click", function () {
 });
 
 
+// Enter event
+document.addEventListener("keydown", function (e) {
+    if (e.key == "Enter") {
+        checkInput();
+    }
+})
