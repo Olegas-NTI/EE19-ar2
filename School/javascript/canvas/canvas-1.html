@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./canvas.css">
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas></canvas>
+    </div>
+    <script>
+        const rityta = document.querySelector("canvas")
+        rityta.width = 900
+        rityta.height = 550
+        const sweYellow = "#FFCD00"
+        var ctx = rityta.getContext("2d")
+        ctx.fillStyle = sweYellow
+        ctx.fillRect(250, 0, 100, 550)
+        ctx.fillRect(0, 200, 900, 100)
+    </script>
+</body>
+</html>
