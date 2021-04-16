@@ -1,7 +1,7 @@
 'use strict';
 
 
-/* 
+
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours = {
     [weekdays[3]]: {
@@ -16,8 +16,8 @@ const openingHours = {
         open: 0, // Open 24 hours
         close: 24,
     }
-}; 
-*/
+};
+
 
 // Data needed for first part of the section
 const restaurant = {
@@ -57,9 +57,125 @@ const restaurant = {
         console.log(otherIngredients);
     }
 };
+///////////
+// Maps (fundamentals)
+//
+/* 
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+rest.set(2, 'Lisbon, Portugal');
+
+rest
+    .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+    .set('open', 11)
+    .set('close', 23)
+    .set(true, 'We are open 🤗')
+    .set(false, 'We are closed! 😪');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+const time = 8;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+console.log(rest.has('categories'));
+console.log(rest.delete(2));
+// console.log(rest.clear);
+
+const arr = [1, 2];
+rest.set(arr, 'test if it works');
+rest.set(document.querySelector('h1'), 'Heading of webpage');
+console.log(rest);
+console.log(rest.size);
+console.log(rest.get(arr));
+
+///////////
+// Maps (Iteration)
+//
+const question = new Map([
+    ['question', 'What is the best programming language in the world?'],
+    [1, 'C'],
+    [2, 'Java'],
+    [3, 'Javascript'],
+    ['correct', 3],
+    [true, 'Correct! 🎉'],
+    [false, 'Wrong! ❌']
+]); */
+// Convert object to map
+// console.log(Object.entries(openingHours));
+// const hoursMap = new Map(Object.entries(openingHours))
+// console.log(hoursMap);
+// console.log(question.get('question'));
+// for (const [key, value] of question)
+//     if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// const answer = Number(prompt('Your answer?'));
+// const correctAnswer = question.get('correct');
+
+// Gets value out of comparing which is boolean value true or false and inserts it in the question so its either way true or false and returns the value depending on what key we got.
+// console.log(question.get(answer === correctAnswer));
+
+// Convert map to array
+// console.log(...question);
+// console.log(question);
+///////////
+// Sets
+//
+/* const orderSet = new Set([
+    'Pasta',
+    'Pizza',
+    'Pizza',
+    'Rizotto',
+    'Pasta',
+    'Pizza'
+]);
+console.log(orderSet);
+console.log(new Set('Olegas'));
+console.log(orderSet.size);
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Garlic Bread'));
+orderSet.add('Garlic Bread')
+orderSet.add('Garlic Bread')
+orderSet.delete('Rizotto')
+// orderSet.clear();
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter', 'Waiter', 'Student']
+const typesWorking = [...new Set(staff)]
+console.log(...typesWorking, typesWorking.length );
+*/
+/*
+// Property NAMES!
+const properties = Object.keys(openingHours);
+console.log(properties);
+let openStr = `We are open on ${properties.length} days:`
+
+for (const day of Object.keys(openingHours)) {
+    openStr += ` ${day},`
+}
+console.log(openStr);
+
+// Propery Values
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entire Object!
+const entries = Object.entries(openingHours)
+ console.log(entries);
+ console.log(entries[0]);
+
+for (const [key, {open, close}] of entries) {
+    console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+*/
+
 
 // Optional chaining
 // Instead of this
+/*
 if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
 // Use optional chaining (?)
 console.log(restaurant.openingHours.mon?.open);
@@ -70,7 +186,7 @@ for (const day of weekdays) {
     const openTime = restaurant.openingHours[day]?.open ?? 'closed';
     console.log(`On day ${day} we open at ${openTime}`);
 }
-// Option chainin with methods 
+// Option chainin with methods
 console.log(restaurant.order?.(0, 1) ?? "Dont know this method");
 console.log(restaurant.orderRisotto?.(0, 1) ?? "Dont know this method");
 
@@ -79,94 +195,17 @@ const users = [
     { name: '', email: 'olegas.sevcenko@gmail.com' }
 ];
 console.log(users[0]?.name || 'No name provided in the object');
+*/
 // Looping arrays
 /*
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const item of menu) console.log(item);
 for (const [i, el] of menu.entries()) console.log(`${i + 1}: ${el}`);
 */
-/*
-We're building a football betting app (soccer for my American friends 😅)!
-Suppose we get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
-1. Create one player array for each team (variables 'players1' and 'players2')
-2. The first player in any player array is the goalkeeper and the others are field players. For Bayern Munich (team 1) create one variable ('gk') with the goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 field players
-3. Create an array 'allPlayers' containing all players of both teams (22 players)
-4. During the game, Bayern Munich (team 1) used 3 substitute players. So create a new array ('players1Final') containing all the original team1 players plus 'Thiago', 'Coutinho' and 'Perisic'
-5. Based on the game.odds object, create one variable for each odd (called 'team1', 'draw' and 'team2')
-6. Write a function ('printGoals') that receives an arbitrary number of player names (NOT an array) and prints each of them to the console, along with the number of goals that were scored in total (number of player names passed in)
-7. The team with the lower odd is more likely to win. Print to the console which team is more likely to win, WITHOUT using an if/else statement or the ternary operator.
-TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
-GOOD LUCK 😀
-*/
 
 /*
-const game = {
-    team1: 'Bayern Munich',
-    team2: 'Borrussia Dortmund',
-    players: [
-      [
-        'Neuer',
-        'Pavard',
-        'Martinez',
-        'Alaba',
-        'Davies',
-        'Kimmich',
-        'Goretzka',
-        'Coman',
-        'Muller',
-        'Gnarby',
-        'Lewandowski',
-      ],
-      [
-        'Burki',
-        'Schulz',
-        'Hummels',
-        'Akanji',
-        'Hakimi',
-        'Weigl',
-        'Witsel',
-        'Hazard',
-        'Brandt',
-        'Sancho',
-        'Gotze',
-      ],
-    ],
-    score: '4:0',
-    scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-    date: 'Nov 9th, 2037',
-    odds: {
-      team1: 1.33,
-      x: 3.25,
-      team2: 6.5,
-    },
-  };
-// 1
-const [players1, players2] = game.players
-
-// 2
-const [gk, ...fieldPlayers] = players1
-console.log(gk, fieldPlayers);
-// 3
-const allPlayers = [...players1, ...players2]
-console.log("--------------------");
-// 4
-const subsitutePlayers = ['Thiago', 'Coutinho', 'Perisic']
-const players1Final = [...players1, ...subsitutePlayers]
-// 5
-const {team1, x:draw, team2} = game.odds
-console.log(team1, draw, team2);
-// 6
-const printGoals = function (...players) {
-    console.log(`${players.length} goals were scored`);
-};
-printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels')
-// 7
-team1 < team2 && console.log("Team 1 is more likely to win");
-team1 > team2 && console.log("Team 2 is more likely to win");
- */
 // Logical OP's
 // Use ANY data type, return ANY data type, short-circuiting
-/*
 console.log("---- OR -----");
 console.log(3 || 'Jonas');
 console.log('' || 'Jonas');
@@ -330,7 +369,7 @@ restaurant.orderPasta(...ingredients)
 */
 
 
-// Array REST 
+// Array REST
 
 /*
  // 1. Destructuring
@@ -368,3 +407,6 @@ add(...x)
 
 restaurant.orderpizza('mushrooms', 'onion', 'olives', 'spinach')
 */
+
+
+
