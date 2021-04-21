@@ -1,8 +1,54 @@
+
 body { 
-    background-color: #fff;
+    background-color: #252525;
 }
+
 canvas {
-    background-color: #004B87;
+    background-color: #fff;
     margin: auto;
     display: block;
+}
+
+.kontainer {
+    background-color: #3b3b3b;
+    width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
+ 
+h1 {
+    color: white;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    margin: 10px 0;
+    padding: 0;
+}
+
+input, textarea {
+    padding: 0.5em;
+    margin-top: -0.4em;
+    font-style: italic;
+    border: none;
+    border-radius: 0.1em;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+textarea {
+    height: 10em;
+}
+button {
+    margin: 1em 0;
+    padding: 0.7em;
+    border-radius: 0.3em;
+    border: none;
+    font-weight: bold;
+    color: #555555;
 }
