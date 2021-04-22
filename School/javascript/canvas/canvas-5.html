@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skriva text</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <div class="kontainer">
+        <div class="sidebar">
+            <h1>Rita canvas</h1>
+        </div>
+        <canvas></canvas>
+    </div>
+    <script defer>
+        const rityta = document.querySelector("canvas")
+        rityta.width = 600;
+        rityta.height = 600;
+        var ctx = rityta.getContext("2d")
+        
+
+        ctx.fillStyle = "red"
+        ctx.fillRect(100, 100, 50, 50)
+        ctx.strokeStyle = "green"
+        ctx.strokeRect(100, 100, 50, 50)
+        
+        // font setup
+        ctx.font = "60px Calistoga"
+        
+        // write some text
+        ctx.fillText("Canvas", 100, 300)
+        ctx.strokeText("Canvas", 100, 400)
+    </script>
+</body>
+</html>

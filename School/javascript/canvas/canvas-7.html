@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skriva text</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <div class="kontainer">
+        <div class="sidebar">
+            <h1>Rita canvas</h1>
+            <label>x: <input type="text" id="xInput"></label>
+            <label>y: <input type="text" id="yInput"></label>
+            <label>bredd: <input type="text" id="bInput"></label>
+            <label>höjd: <input type="text" id="hInput"></label>
+            <label>färg: <input type="color" id="färgInput"></label>
+            <button id="btnPaint">Lägga in ett canvas!</button>
+            <button id="btnRadera">Radera canvas.</button>
+        </div>
+        <canvas></canvas>
+    </div>
+    <script defer>
+        const xElement = document.querySelector("#xInput")
+        const yElement = document.querySelector("#yInput")
+        const bElement = document.querySelector("#bInput")
+        const hElement = document.querySelector("#hInput")
+        const färgElement = document.querySelector("#färgInput")
+        const btnElement = document.querySelector("#btnPaint")
+        const btnRaderaElement = document.querySelector("#btnRadera")
+        const rityta = document.querySelector("canvas")
+        rityta.width = 600;
+        rityta.height = 600;
+        var ctx = rityta.getContext("2d")
+
+        const raderaCanvas = function () {
+            ctx.clearRect(0, 0, 600, 600)
+        }
+        const ritaFiguren = function () {
+            ctx.fillStyle = färgElement.value
+            ctx.fillRect(xElement.value, yElement.value, bElement.value, hElement.value)
+        }
+        // default color
+        ctx.fillStyle = "black"
+
+        btnElement.addEventListener("click", ritaFiguren)
+        document.addEventListener("keypress", function (e) {
+            console.log(e);
+            if (e.key == "Enter") {
+                ritaFiguren()
+            }
+        })
+        btnRaderaElement.addEventListener("click", raderaCanvas)
+
+    </script>
+</body>
+</html>
