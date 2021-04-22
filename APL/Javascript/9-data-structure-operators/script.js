@@ -281,8 +281,23 @@ const { fri: { open: openinHours, close: closingHours } } = openingHours;
 console.log(openingHours, closingHours);
 */
 
-/*
 
+////////////////////////////////////////////////////////////////////////////
+// Strings  
+// 
+const airplane = 'TAP Air Portugal'
+const plane = 'A320'
+console.log(plane[0]);
+console.log("A320"[0]);
+
+console.log(airplane.indexOf('r'));
+console.log(airplane.lastIndexOf('r'));
+console.log(airplane.indexOf('Portugal'));
+
+console.log(airplane.slice(4));
+console.log(airplane.slice(4, 7));
+
+/*
 ////////////////////////////////////////////////////////////////////////////
 //  Arrays!
 
