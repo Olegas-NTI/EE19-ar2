@@ -296,6 +296,22 @@ console.log(airplane.indexOf('Portugal'));
 
 console.log(airplane.slice(4));
 console.log(airplane.slice(4, 7));
+console.log(airplane.slice(0, airplane.indexOf(' ')));
+console.log(airplane.slice(airplane.lastIndexOf('') + 1));
+console.log(airplane.slice(-2));
+console.log(airplane.slice(1, -2));
+
+const checkMiddleSeat = function (seat) {
+    const seatLine = seat.slice(-1)
+    if (seatLine === "B" || seatLine === "E") {
+        console.log("The seat is middle seat! 🤢");
+    } else {
+        console.warn("You didn't get the middle seat! 😏");
+    }
+}
+checkMiddleSeat("11B")
+checkMiddleSeat("23C")
+checkMiddleSeat("3E")
 
 /*
 ////////////////////////////////////////////////////////////////////////////
