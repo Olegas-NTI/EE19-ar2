@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Boka rum</h1>
+        <h2>Beställning</h2>
+        <label>Ange namn <input type="text" class="namn"></label>
+        <label>Antal nätter <input type="text" class="antal"></label>
+        <h3>Ange rumstyp</h3>
+        <label>
+            <br>
+            <div><input type="radio" name="rumstyp" class="enkel"> Enkelrum 800:-</div>
+        </label>
+        <label>
+            <br>
+            <div><input type="radio" name="rumstyp" class="dubbel"> Dubbelrum 1200:</div>
+        </label>
+        <label>
+            <br>
+            <div><input type="radio" name="rumstyp" class="familj"> Familjerum 1500:-</div>
+        </label>
+
+<h3>Ange tillägg</h3>
+        <label>
+            <br>
+            <div><input type="checkbox" class="wifi"> Wifi</div>
+        </label>
+        <label>
+            <br>
+            <div><input type="checkbox" class="parkering"> Parkering</div>
+        </label>
+        <label>
+            <br>
+            <div><input type="checkbox" class="frukost"> Frukost</div>
+        </label>
+
+        <button>Räkna Ut</button>
+
+        <h2>Uppskattad kostnad</h2>
+        <label>Total Pris <textarea cols="30" rows="10"></textarea></label>
+    </div>
+    <script>
+        const eNamn = document.querySelector(".namn")
+        const eAntal = document.querySelector(".antal")
+        const radioEnkel = document.querySelector(".enkel")
+        const radioDubbel = document.querySelector(".dubbel")
+        const radioFamilj = document.querySelector(".familj")
+
+        const boxWifi = document.querySelector(".wifi")
+        const boxParkering = document.querySelector(".parkering")
+        const boxFrukost = document.querySelector(".frukost")
+        const btn = document.querySelector("button")
+        const outputRuta = document.querySelector("textarea")
+
+        let summan = 0;
+        radioEnkel.addEventListener("click", function () {
+            summan = 800;
+        })
+        radioDubbel.addEventListener("click", function () {
+            summan = 1200;
+        })
+        radioFamilj.addEventListener("click", function () {
+            summan = 1600;
+        })
+        
+        boxWifi.addEventListener("click", function () {
+            summan += 50
+        })
+        boxParkering.addEventListener("click", function () {
+            summan += 200
+        })
+        boxFrukost.addEventListener("click", function () {
+            summan += 200
+        })
+        btn.addEventListener("click", function () {
+            summan *= eAntal.value
+            outputRuta.value = `Hej ${eNamn.value}, det kommer kosta dig ${summan} kr att stanna här för ${eAntal.value} natter.`
+        })  
+    </script>
+</body>
+</html>

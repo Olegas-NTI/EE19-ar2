@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Boka rum</h1>
+        <h2>Beställning</h2>
+        <label>Antal nätter <input type="text" class="antal"></label>
+        <label>Enkelrum 800:-, dubbelrum 1200:- <input type="text" class="pris"></label>
+        <label>Tillägg wifi 100:-<input type="text" class="wifi"></label>
+        <label>Tillägg parkering 50:- <input type="text" class="parkering"></label>
+        <button>Räkna Ut</button>
+
+        <h2>Uppskattad kostnad</h2>
+        <label>Pris för rummet <input type="text" disabled class="prisRummet"></label>
+        <label>Pris för tilägg <input type="text" disabled class="prisTillägg"></label>
+        <label>Total för nokning  <input type="text" disabled class="total"></label>
+    </div>
+    <script>
+        /* Hitta elementen vi kommer använda */
+        const antalNatter = document.querySelector(".antal") 
+        const prisRummet = document.querySelector(".pris")
+        const wifi = document.querySelector(".wifi")
+        const parkering = document.querySelector(".parkering")
+        const btn = document.querySelector("button")
+        const outputRum = document.querySelector(".prisRummet")
+        const outputTilägg = document.querySelector(".prisTillägg")
+        const outputTotal = document.querySelector(".total")
+        btn.addEventListener("click", function () {
+            outputRum.value = antalNatter.value * prisRummet.value
+            outputTilägg.value = Number(wifi.value) + Number(parkering.value)
+            outputTotal.value = Number(outputRum.value) + Number(outputTilägg.value)
+        })
+    </script>
+</body>
+</html>
