@@ -34,5 +34,5 @@
   "menu": {
     "style": "glow"
   },
-  "defaultDarkMode": true
+  "defaultDarkMode": false
 }
