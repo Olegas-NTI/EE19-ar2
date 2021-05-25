@@ -23,14 +23,16 @@ for (let i = 0; i < buttons.length; i++) {
                 })
             }
         } 
-    })    
-    
+    })          
 }
+
 
 enter.addEventListener("click", function () {
     if (operation == "+") {
         calcOutput.value = nummerEtt + nummerTvå
-        document.querySelector('.history-list').innerHTML = `<li>${nummerEtt} + ${nummerTvå} = ${calcOutput.value}</li>`
+        const li = document.createElement('li');
+        li.innerText = `${nummerEtt} + ${nummerTvå} = ${calcOutput.value}`
+        document.querySelector(".history-list").appendChild(li);
     } 
     if (operation == "-") {
         calcOutput.value = nummerEtt - nummerTvå
@@ -41,14 +43,11 @@ enter.addEventListener("click", function () {
     if (operation == "*") {
         calcOutput.value = nummerEtt * nummerTvå
     }
-   reset();
-
-})
-
-const reset = function () {
     numberBoxEtt = "";
     numberBoxTvå = "";
-    operation;
-    nummerTvå;
-    nummerEtt;
-}
+    operation = undefined;
+    nummerTvå = "";
+    nummerEtt = "";
+    calcOutput.value = ""
+})
+
