@@ -48,6 +48,5 @@ enter.addEventListener("click", function () {
     operation = undefined;
     nummerTvå = "";
     nummerEtt = "";
-    calcOutput.value = ""
 })
 
