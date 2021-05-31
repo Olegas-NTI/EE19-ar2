@@ -198,10 +198,48 @@ button:hover {
     box-shadow: inset 0 0 0 4px #fff;
 }
 
+/* Media queries */
+/* Style changes on 700px */
+@media (max-width: 700px) {
+    .top-container {
+        grid-template-areas:
+            "showcase showcase"
+            "top-box-a top-box-b";
+    }
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+    .info {
+        grid-template-columns: 1fr;
+    }
+    .info .btn {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-container {
+        grid-template-areas:
+            "showcase"
+            "top-box-a"
+            "top-box-b";
+    }
+}
+
+
 /* Hex sida */
+.hex-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .hex-section {
     width: 100%;
-    height: 30vh;
+    height: 50vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
@@ -217,6 +255,17 @@ input {
     transition: 0.2s;
     margin-top: 20px;
 }
+/* Hex sida media queries */
+@media (max-width: 500px) {
+    .hex-section {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+    .hex-canvas {
+        height: 100px;
+    }
+}
+
 
 /* Calculator */
 .calculator-container {
@@ -277,6 +326,13 @@ input {
     overflow: auto;
 }
 
+/* Media queries for calculator page */
+@media (max-width: 1150px) {
+    .calculator-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Array page */
 .array-section {
     display: grid;
@@ -305,33 +361,12 @@ code {
     padding: 5px 5px;
     color: white;
 }
-
-/* Media queries */
-/* Style changes on 700px */
-@media (max-width: 700px) {
-    .top-container {
-        grid-template-areas:
-            "showcase showcase"
-            "top-box-a top-box-b";
-    }
-    .showcase h1 {
-        font-size: 2.5rem;
-    }
-    .info {
-        grid-template-columns: 1fr;
-    }
-    .info .btn {
-        display: block;
-        text-align: center;
-        margin: auto;
+/* Media queries for array page */
+@media (max-width: 1150px) {
+    .array-top {
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
 
-@media (max-width: 500px) {
-    .top-container {
-        grid-template-areas:
-            "showcase"
-            "top-box-a"
-            "top-box-b";
-    }
-}
+
