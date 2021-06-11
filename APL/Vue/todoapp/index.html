@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List by Udayantha</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
+
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: rgba(179, 55, 113, 0.65);
+            border: solid 1px #6D214F;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .input-field {
+            display: grid;
+            grid-template-columns: 78% 20%;
+            justify-content: space-between;
+        }
+
+
+
+        .btn {
+            background-color: white;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 10px 40px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        input {
+            margin-bottom: 20px;
+            padding: 8px;
+            outline: 0;
+            border: 0;
+            border: none;
+            color: #2f3542;
+        }
+
+        input:focus {
+            outline: 0;
+            border: #23272A;
+        }
+
+        li {
+            color: white;
+            font-size: 18px;
+        }
+        /* Media queries */
+        @media (max-width: 500px) {
+            .input-field {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 10px;
+            }
+            .btn {
+                font-size: 15px;
+                padding: 7px 25px;
+            }
+            .btn-small {
+                font-size: 10px;
+                padding: 7px 20px;
+                width: 100px;
+            }
+            li {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>Todo List</h1>
+
+        <div v-if="!isEditing">
+            <div class="input-field">
+                <input type="text" v-model="todo">
+                <input type="time" v-model="time">
+            </div>
+            <input class="btn" type="submit" value="Add" @click="storeTodo">
+        </div>
+        <div class="input-field" v-else>
+            <input type="text" v-model="todo">
+            <input class="btn" type="submit" value="Update" @click="updateTodo">
+        </div>
+
+        <ol>
+            <li v-for="(todo, index) in todos">
+                {{ todo }}
+                <div>
+                    <button class="btn btn-small" @click="editTodo(index, todo)">Edit</button>
+                    <button class="btn btn-small" @click="removeTodo(index)">Delete</button>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        new Vue({
+            el: '#app',
+
+            data: {
+                isEditing: false,
+                todo: '',
+                time: '',
+                todos: [],
+                selectedTodo: null
+            },
+
+            methods: {
+                storeTodo() {
+                    if (this.todo == "") {
+                        alert("Please fill something!")
+                    } else if (this.time == "") {
+                        console.log(this.time);
+                        this.todos.push(this.todo)
+                        this.todo = ''
+                    } else {
+                        this.todos.push(this.todo + " at " + this.time)
+                        this.todo = ''
+                    }
+                },
+
+                removeTodo(index) {
+                    this.todos.splice(index, 1)
+                },
+
+                updateTodo() {
+                    this.todos.splice(this.selectedIndex, 1, this.todo)
+                    this.todo = ''
+                    this.isEditing = false
+                },
+
+                editTodo(index, todo) {
+                    this.isEditing = true
+                    this.todo = todo
+                    this.selectedIndex = index
+                }
+            }
+        })
+    </script>
+</body>
+</html>
