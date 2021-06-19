@@ -284,22 +284,23 @@ console.log(openingHours, closingHours);
 
 ////////////////////////////////////////////////////////////////////////////
 // Strings  
-// 
-const airplane = 'TAP Air Portugal'
+//
+console.warn(`------ String methods ------`);
+const airline = 'TAP Air Portugal'
 const plane = 'A320'
 console.log(plane[0]);
 console.log("A320"[0]);
 
-console.log(airplane.indexOf('r'));
-console.log(airplane.lastIndexOf('r'));
-console.log(airplane.indexOf('Portugal'));
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
 
-console.log(airplane.slice(4));
-console.log(airplane.slice(4, 7));
-console.log(airplane.slice(0, airplane.indexOf(' ')));
-console.log(airplane.slice(airplane.lastIndexOf('') + 1));
-console.log(airplane.slice(-2));
-console.log(airplane.slice(1, -2));
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf('') + 1));
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -2));
 
 const checkMiddleSeat = function (seat) {
     const seatLine = seat.slice(-1)
@@ -313,6 +314,65 @@ checkMiddleSeat("11B")
 checkMiddleSeat("23C")
 checkMiddleSeat("3E")
 
+// Capitalization 
+console.warn(`------ Capitalization ------`);
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalization in name
+function fixCapitalization(passengerName) {
+    const passengerLower = passengerName.toLowerCase()
+    const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1)
+    return passengerCorrect
+}
+console.log(fixCapitalization('oLegAS'));
+
+// Comparing emails
+console.warn(`------ Comparing Emails ------`);
+function checkEmail(email, inputedEmail) {
+    const normalizedEmail = inputedEmail.toLowerCase().trim()
+    if (normalizedEmail === email) {
+        return console.log(`Converted "${inputedEmail}" to ${normalizedEmail}\n${normalizedEmail} === ${email}\nEmails are identical!`)
+    } else {
+        return console.error(`Converted "${inputedEmail}" to "${normalizedEmail}"\n${normalizedEmail} !== ${email}\nEmails are NOT identical!\n`)
+    }   
+}
+checkEmail('olegas@student.io', 'olegas@student.io') // true
+checkEmail('olegas@student.io', 'olegas@studen.io') // false
+
+// Replacing
+console.warn(`------ Replacing ------`);
+const priceGB = '205,45$'
+const priceUS = priceGB.replace('$', '€').replace(',', '.')
+console.log(priceUS);
+
+const annoucement = 'All passengers come to barding door 23. Boarding door 23.'
+// console.log(annoucement.replaceAll('door', 'gate')); // new replaceAll
+console.log(annoucement.replace(/door/g, 'gate')); // RegEx
+
+// Booleans
+console.warn(`------ Booleans ------`);
+const newPlane ='Airbus A320neo'
+console.log(newPlane.includes('A320'));
+console.log(newPlane.includes('Boeing'));
+console.log(newPlane.includes('Airb'));
+
+if (newPlane.startsWith('Airbus') && newPlane.endsWith('neo')) {
+    console.log('Part of the NEW Airbus family');
+} 
+
+// Pracise exercise
+const checkBaggage = function (items) {
+    const baggage = items.toLowerCase()
+    if (baggage.includes('knife') || baggage.includes('gun')) {
+        console.log('You are NOT allowed to bring gun or a knife');
+    } else {
+        console.log('You are welcome here!');
+    }
+}
+checkBaggage('I have a laptop, some food and a pocket knife')
+checkBaggage('Socks and camera')
+checkBaggage('Got some snacks and a gun for protection')
 /*
 ////////////////////////////////////////////////////////////////////////////
 //  Arrays!
