@@ -196,3 +196,11 @@ const addNEWTAX = function (rate) {
 addNEWTAX(0.23)(100)
 const addNEWVAT = addNEWTAX(0.23)
 addNEWVAT(100)
+
+
+// IIFE
+(function(symbol) {
+    console.log('Regular function>\nThis will never be runned again' + symbol);
+})('!');
+
+(() => console.log('Arrow func>\nThis will never run again'))();
