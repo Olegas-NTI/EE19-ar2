@@ -112,7 +112,7 @@ greetArr('Hey!')('Olegas')
 */
 
 // Call Apply and Bind Methods 
-
+/* 
 const lufthansa = {
     airline: 'lufthansa',
     iataCode: 'LH',
@@ -196,11 +196,66 @@ const addNEWTAX = function (rate) {
 addNEWTAX(0.23)(100)
 const addNEWVAT = addNEWTAX(0.23)
 addNEWVAT(100)
-
+*/
 
 // IIFE
-(function(symbol) {
+/* (function(symbol) {
     console.log('Regular function>\nThis will never be runned again' + symbol);
 })('!');
 
-(() => console.log('Arrow func>\nThis will never run again'))();
+(() => console.log('Arrow func>\nThis will never run again'))(); 
+*/
+
+// Closures 
+/* 
+const secureBooking = function () {
+    let passengerCount = 0;
+    return function () {
+        passengerCount++;
+        console.log(`${passengerCount} passengers`);
+    }
+}
+
+const booker = secureBooking(); 
+*/
+
+// Example 1
+/* 
+let f;
+
+const g = function () {
+    const a = 23;
+    f = function () {
+        console.log(a * 2);
+    };
+};
+
+const h = function () {
+    const b = 777;
+    f = function () {
+        console.log(b * 2);
+    };
+};
+g();
+f();
+console.dir(f)
+
+// h gets called and it reassigns f variable to another function that grabs b and multiplies it with 2
+h();
+f();
+console.dir(f)
+
+// Example 2
+const boardPassenger = function (n, wait) {
+    const perGroup = n / 3;
+    setTimeout(function(){
+        console.log(`WE are now boarding all ${n} passengers`)
+        console.log(`There are 3 groups, each with ${perGroup} passengers`);
+    }, wait * 1000)
+    console.log(`Will start boarding in ${wait} seconds`)   
+}
+// Closure have priority over scope chain
+
+const perGroup = 1000;
+boardPassenger() 
+*/
