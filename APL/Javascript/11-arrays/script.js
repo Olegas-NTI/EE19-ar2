@@ -68,9 +68,12 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
-  movements.forEach((mov, i) => {
+
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements
+
+  movs.forEach((mov, i) => {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `
     <div class="movements__row">
@@ -167,17 +170,37 @@ btnTransfer.addEventListener("click", (e) => {
 });
 
 btnClose.addEventListener('click', (e) => {
-  e.preventDefault()
+  e.preventDefault();
   if (inputCloseUsername.value === currentAccount.username && Number(inputClosePin.value) === currentAccount.pin) {
     // Find position in the accounts array what object in the array to delete
-    const index = accounts.findIndex(acc => acc.username === currentAccount.username)
+    const index = accounts.findIndex(acc => acc.username === currentAccount.username);
     // Deletes the account
-    accounts.splice(index, 1)
+    accounts.splice(index, 1);
     // Hide UI
     containerApp.style.opacity = 0;
   }
   inputCloseUsername.value = inputClosePin.value = '';
+});
+
+btnLoan.addEventListener('click', (e) => {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    // Add movement
+    currentAccount.movements.push(amount);
+    // Update UI
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = '';
+});
+
+let sorted = false
+btnSort.addEventListener('click', (e) => {
+  e.preventDefault()
+  displayMovements(currentAccount.movements, !sorted)
+  sorted = !sorted
 })
+
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -351,4 +374,77 @@ for (let account of accounts) {
     console.log(`For loop method`, account);
   };
 }
+*/
+
+
+/* 
+// some and every methods
+// EQUALITTY Includes
+console.log(movements.includes[-130]);
+
+// CONDITION Some
+console.log(movements.some(mov => mov === -130)) // same as includes
+
+const anyDeposits = movements.some(mov => mov > 15000);
+console.log(anyDeposits);
+
+// CONDITION EVERY
+// Returns true only if all values in the array satisfy the condition
+console.log(movements.every(mov => mov > 0));
+
+// Separate callback
+const deposit = mov => mov > 0
+console.log(`---- SOME METHOD ----`);
+console.log(movements.some(deposit));
+console.log(`---- EVERY METHOD ----`);
+console.log(movements.every(deposit));
+console.log(`---- FILTER METHOD ----`);
+console.log(movements.filter(deposit)); 
+*/
+
+/* 
+// flat and flatMap methods
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+const arrDeep = [[[1, 2, 3]], [4,[5, 6]], 7, 8];
+console.log(arrDeep.flat(2));
+
+const accountMovements = accounts.map(acc => acc.movements)
+const allMovements = accountMovements.flat()
+const bankNetWorth = allMovements.reduce((acc, curr) => acc + curr, 0)
+console.log(bankNetWorth);
+
+
+// Flat
+const chainedBankNetWorth = accounts.map(acc => acc.movements).flat().reduce((acc, mov) => acc + mov, 0)
+console.log(chainedBankNetWorth);
+// Flat Map
+const flatMapedBankNetWorth = accounts.flatMap(acc => acc.movements).reduce((acc, mov) => acc + mov, 0)
+console.log(flatMapedBankNetWorth);
+*/
+
+/* 
+// SORT METHOD!
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha']
+// Sorts values from a-z it does mutate the array too
+const sortedOwners = owners.sort();
+// Array does get mutaded even though we save it in a variable, so calling it will change the array forever unless you somehow mutate it back to the original version of it later and not touching the saved variable
+console.log(owners);
+console.log(sortedOwners);
+
+
+// Numbers
+console.log(movements);
+// return < 0, a, b (keep order)
+// return > 0, b, a (switch order)
+
+// Ascending order
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (a < b) return -1;
+})
+// Same thing
+movements.sort((a, b) => a - b)
+
+console.log(movements); 
 */
