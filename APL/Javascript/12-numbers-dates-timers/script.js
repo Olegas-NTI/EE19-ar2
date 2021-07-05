@@ -51,7 +51,7 @@ const account2 = {
 
 const account3 = {
   owner: 'Olegas Sevcenko',
-  movements: [5000, 210, -5000, 150000, -3210, 40500, 8500, -30],
+  movements: [200, 210, -50, 100, -30, 250, 10, -5],
   interestRate: 1.5,
   pin: 3333,
 
@@ -69,7 +69,27 @@ const account3 = {
   locale: 'se-SE',
 };
 
-const accounts = [account1, account2, account3];
+const account4 = {
+  owner: 'Maram Asghar',
+  movements: [30, 210, -50, 150, -30, 550, -5],
+  interestRate: 1.5,
+  pin: 4444,
+
+  movementsDates: [
+    '2019-11-01T13:15:33.035Z',
+    '2019-11-30T09:48:16.867Z',
+    '2019-12-25T06:04:23.907Z',
+    '2020-01-25T14:18:46.235Z',
+    '2020-02-05T16:33:06.386Z',
+    '2021-04-10T14:43:26.374Z',
+    '2021-06-25T18:49:59.371Z',
+    '2021-07-26T12:01:20.894Z',
+  ],
+  currency: 'KWD',
+  locale: 'ar-KW',
+};
+
+const accounts = [account1, account2, account3, account4];
 
 /////////////////////////////////////////////////
 // Elements
@@ -193,13 +213,42 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
-// Event handler
-let currentAccount;
 
-// FAKE ALWAYS LOGGED IN
-currentAccount = account1;
-updateUI(currentAccount);
-containerApp.style.opacity = 100;
+const startLogOutTimer = function () {
+  const tick = function () {
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const sec = String(Math.trunc(time % 60)).padStart(2, 0);
+    // In each call, print the remaining time to UI
+    labelTimer.textContent = `${min}:${sec}`;
+
+    // When timer is 0, stop timer and log out logged in User
+    if (time === 0) {
+      clearInterval(timerInterval);
+      labelWelcome.textContent = 'Log in to get started';
+      containerApp.style.opacity = 0;
+    }
+    // Decrease time
+    time--;
+
+  };
+
+  // Set time to 5 minutes
+  let time = 60 * 5;
+
+  // Call the timer every second
+  tick();
+  const timerInterval = setInterval(tick, 1000);
+  return timerInterval;
+};
+
+////////////////////////////
+// Event handlers
+let currentAccount, timerInterval;
+
+// // FAKE ALWAYS LOGGED IN
+// currentAccount = account1;
+// updateUI(currentAccount);
+// containerApp.style.opacity = 100;
 
 
 btnLogin.addEventListener('click', (e) => {
@@ -239,6 +288,14 @@ btnLogin.addEventListener('click', (e) => {
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
+
+    // If timer exists clear it
+    if (timerInterval) clearInterval(timerInterval);
+    // Start the timer
+    timerInterval = startLogOutTimer();
+
+
+    // UpdateUI, and welcome message in the console
     updateUI(currentAccount);
     console.log(`Sucessfully logged in as ${currentAccount.owner}`);
   }
@@ -254,18 +311,21 @@ btnTransfer.addEventListener("click", (e) => {
     receiverAcc &&
     currentAccount.balance >= amount &&
     receiverAcc?.username !== currentAccount.username) {
-    setTimeout(() => {
-      // Doing the transfer
-      currentAccount.movements.push(-amount);
-      receiverAcc.movements.push(amount);
 
-      // Add trasnfer date
-      currentAccount.movementsDates.push(new Date().toISOString());
-      receiverAcc.movementsDates.push(new Date().toISOString());
+    // Doing the transfer
+    currentAccount.movements.push(-amount);
+    receiverAcc.movements.push(amount);
 
-      // Update UI
-      updateUI(currentAccount);
-    }, 2500);
+    // Add trasnfer date
+    currentAccount.movementsDates.push(new Date().toISOString());
+    receiverAcc.movementsDates.push(new Date().toISOString());
+
+    // Update UI
+    updateUI(currentAccount);
+
+    // Reset timer on activity
+    clearInterval(timerInterval);
+    timerInterval = startLogOutTimer();
   }
 });
 
@@ -286,12 +346,19 @@ btnLoan.addEventListener('click', (e) => {
   e.preventDefault();
   const amount = Math.floor(inputLoanAmount.value);
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
-    // Add movement
-    currentAccount.movements.push(amount);
-    // Add loan date
-    currentAccount.movementsDates.push(new Date().toISOString());
-    // Update UI
-    updateUI(currentAccount);
+    // Fake request as if we wait for reponse from bank to do the transfer
+    setTimeout(() => {
+      // Add movement
+      currentAccount.movements.push(amount);
+      // Add loan date
+      currentAccount.movementsDates.push(new Date().toISOString());
+      // Update UI
+      updateUI(currentAccount);
+
+      // Reset timer on activity
+      clearInterval(timerInterval);
+      timerInterval = startLogOutTimer();
+    }, 2500);
   }
   inputLoanAmount.value = '';
 });
@@ -496,8 +563,8 @@ console.log(Date.now());
 future.setFullYear(2040)
 console.log(future);
 */
-/* 
-// Operations with dates 
+/*
+// Operations with dates
 const future = new Date(2037, 10, 19, 15, 23);
 console.log(Number(future)); // converts timestamp in ms
 
@@ -516,12 +583,12 @@ const objectOfOptions = {
       hour: 'numeric',
       minute: 'numeric',
     }
-const locale = navigator.langauge // receives browsers language 
+const locale = navigator.langauge // receives browsers language
 console.log(new Intl.DateTimeFormat(locale//, objectOfOptions).format(date))
 
 */
 
-/* 
+/*
 // Intl Numbers
 const num = 38887563.43;
 const options = {
@@ -533,9 +600,10 @@ const options = {
 console.log('US', new Intl.NumberFormat('en-US', options).format(num));
 console.log('Germany', new Intl.NumberFormat('de-DE', options).format(num));
 console.log('Q8', new Intl.NumberFormat('ar-KW', options).format(num));
-console.log(navigator.language, new Intl.NumberFormat(navigator.language).format(num)); 
+console.log(navigator.language, new Intl.NumberFormat(navigator.language).format(num));
 */
 
+/*
 // setTimeout, clearTimeout
 console.log('Hi');
 
@@ -549,10 +617,11 @@ console.log('Bye');
 if (ingredients.includes('spinach')) clearTimeout(pizza);
 
 // setInterval clearInterval
-setInterval(function() {
+setInterval(function () {
   const now = new Date();
-  const hour = now.getHours()
-  const min = now.getMinutes() 
-  const sec = now.getSeconds()
+  const hour = now.getHours();
+  const min = now.getMinutes();
+  const sec = now.getSeconds();
   console.log(`${hour}:${min}:${sec}`);
-}, 1000)
+}, 1000);
+*/
