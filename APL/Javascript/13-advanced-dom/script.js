@@ -30,8 +30,10 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// (!) Selecting elements
-
+////////////////////////
+// Lectures 
+/* 
+// (!) Selecting element
 console.log(document.documentElement); // <html> element
 console.log(document.head); // <head> element
 console.log(document.body); // <body> element
@@ -70,7 +72,8 @@ document.querySelector('.btn--close-cookie').addEventListener('click', () => {
   // Old way to remove elements
   // message.parentElement.removeChild(message)
 })
-
+*/
+/* 
 // Styles 
 message.style.backgroundColor = '#37383d'
 message.style.width = '100%'
@@ -112,4 +115,52 @@ logo.classList.toggle('c')
 logo.classList.contains('c') // not includes like in arrrays
 
 // Dont use it because it overwrites the whole class property
-logo.className = 'olegas'
+logo.className = 'olegas' 
+*/
+
+const btnScrollTo = document.querySelector('.btn--scroll-to')
+const section1 = document.querySelector('#section--1')
+
+
+btnScrollTo.addEventListener('click', (e) => {
+  const s1coords = section1.getBoundingClientRect()
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+  console.log(`Current scroll (x/y) ${window.pageXOffset} ${window.pageYOffset}`); // How much u scrolled from top of the document
+  console.log('height/width viewport', document.documentElement.clientHeight, document.documentElement.clientWidth); // Shows current resolution of browser
+
+  // Scrolling 
+  // window.scrollTo(s1coords.left + window.pageXOffset , s1coords.top + window.pageYOffset)
+
+  /* 
+  window.scrollTo({
+    left: s1coords.left + window.pageXOffset, 
+    top: s1coords.top + window.pageYOffset, 
+    behavior: 'smooth'
+  }) 
+  */
+
+  section1.scrollIntoView({behavior: 'smooth'})
+})
+
+/*
+ // Select
+const h1 = document.querySelector('h1')
+
+// Function
+const alerting = (e) => {
+  console.log('addEventListener');
+}
+
+h1.addEventListener('mouseenter', alerting)
+setTimeout(() => {
+  h1.removeEventListener('mouseenter', alerting)
+}, 3000);
+
+// Old way
+// h1.onmouseenter = (e) => {
+//   alert('onmousenter!')
+// }
+ 
+*/
